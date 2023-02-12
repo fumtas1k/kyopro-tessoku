@@ -1,3 +1,5 @@
+# 素集合データ構造(Union-Find木)
+
 class UnionFind
   attr_accessor :parents
 

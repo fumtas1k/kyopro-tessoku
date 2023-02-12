@@ -1,3 +1,5 @@
+# セグメント木
+
 class SegmentTree
   # leaf_size: 葉の数
   # operator: 演算メソッド(合計, 最大値, 最小値などの計算)
