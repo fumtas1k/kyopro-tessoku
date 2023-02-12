@@ -38,7 +38,7 @@ class SegmentTree
   end
 end
 
-File.open("question/A59.txt", "r") do |f|
+File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
   N, Q = f.gets.split.map(&:to_i)
   QUERY = Array.new(Q) { f.gets.split.map(&:to_i) }
 end

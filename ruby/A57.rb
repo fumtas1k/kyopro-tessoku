@@ -6,7 +6,7 @@ start_time = Time.now
 # 10 ^ 9 < 2 ^ 30
 MAX = 30
 
-File.open("question/A57.txt", "r") do |f|
+File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
   N, Q = f.gets.split.map(&:to_i)
   A = [0] + f.gets.split.map(&:to_i)
   XY = Array.new(Q) { f.gets.split.map(&:to_i) }

@@ -4,7 +4,7 @@
 
 start_time = Time.now
 
-File.open("question/A56.txt", "r") do |f|
+File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
   N, Q = f.gets.split.map(&:to_i)
   S = f.gets.chomp
   ABCD = Array.new(Q) { f.gets.split.map { _1.to_i - 1} }
