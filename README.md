@@ -17,3 +17,4 @@
 | - | - | - | - | - |
 | セグメント木 | SegmentTree | [ruby](ruby/library/segment_tree.rb) | | |
 | 素集合データ構造 | UnionFind | [ruby](ruby/library/union_find.rb) | | |
+| ヒープ | MinHeap | [ruby](ruby/library/min_heap.rb) | | |
