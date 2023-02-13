@@ -12,8 +12,7 @@ class SegmentTree
     @operator = method
     @id_elm = id_elm
     @leaf_size = 1 << (n - 1).bit_length
-    @tree = [id_elm] * leaf_size
-    @tree.concat(arr)
+    @tree = [id_elm] * leaf_size + arr
     (leaf_size - 1).downto(1) do |i|
       tree[i] = operator.call(tree[i * 2], tree[i * 2 + 1])
     end
