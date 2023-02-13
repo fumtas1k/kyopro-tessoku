@@ -9,7 +9,8 @@
 | [A57](question/A57.txt) | ダブリング | [ruby](ruby/A57.rb) | | |
 | [A58](question/A58.txt) | セグメント木(RMQ) | [ruby](ruby/A58.rb) | | |
 | [A59](question/A59.txt) | セグメント木(RSQ) | [ruby](ruby/A59.rb) | | |
-| [A67](question/A67.txt) | クラスカル法 | [ruby](ruby/A67.rb) | | |
+| [A67](question/A67.txt) | 最小全域木, クラスカル法 | [ruby](ruby/A67.rb) | | |
+| [A68](question/A68.txt) | 最大フロー, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | |
 
 ## ライブラリ
 
