@@ -9,6 +9,11 @@ class UnionFind(private val size: Int) {
 
   private val parents = MutableList(size + 1) { it }
 
+  /**
+   * 結合
+   * @property u 要素番号
+   * @property v 比較する要素番号
+   */
   fun unite(u: Int, v: Int) {
     val ru = root(u)
     val rv = root(v)
@@ -16,6 +21,12 @@ class UnionFind(private val size: Int) {
     parents[rv] = ru
   }
 
+  /**
+   * 親が同じか
+   * @property u 要素番号
+   * @property v 比較する要素番号
+   * @return true or false
+   */
   fun isSame(u: Int, v: Int): Boolean = root(u) == root(v)
 
   private fun root(u: Int): Int {
