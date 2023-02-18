@@ -1,4 +1,4 @@
-package lib
+package ktln.lib
 
 /**
  * Union-Find木
