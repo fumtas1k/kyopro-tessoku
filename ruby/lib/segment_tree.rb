@@ -34,7 +34,7 @@ class SegmentTree
   # 値の取得
   # [l, r)　求めたい半開区間
   # [a, b) 現在の半開区間
-  # u 現在のセル番号
+  # u 現在のtreeのインデックス
   def query(l, r, a = 1, b = leaf_size + 1, u = 1)
     return id_elm if r <= a || b <= l
     return tree[u] if l <= a && b <= r
