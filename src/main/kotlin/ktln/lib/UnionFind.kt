@@ -11,8 +11,8 @@ class UnionFind(private val size: Int) {
 
   /**
    * 結合
-   * @property u 要素番号
-   * @property v 比較する要素番号
+   * @param u 要素番号
+   * @param v 結合する要素番号
    */
   fun unite(u: Int, v: Int) {
     val ru = root(u)
@@ -23,12 +23,17 @@ class UnionFind(private val size: Int) {
 
   /**
    * 親が同じか
-   * @property u 要素番号
-   * @property v 比較する要素番号
+   * @param u 要素番号
+   * @param v 比較する要素番号
    * @return true or false
    */
   fun isSame(u: Int, v: Int): Boolean = root(u) == root(v)
 
+  /**
+   * 親を取得
+   * @param u 要素番号
+   * @return 親番号
+   */
   private fun root(u: Int): Int {
     if (u == parents[u]) return u
     parents[u] = root(parents[u])

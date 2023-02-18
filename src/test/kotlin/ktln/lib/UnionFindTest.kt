@@ -6,6 +6,10 @@ import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
 import kotlin.test.assertFalse
 
+/**
+ * Union-Find木のテスト
+ *
+ */
 internal class UnionFindTest {
 
   private lateinit var unionFind: UnionFind
