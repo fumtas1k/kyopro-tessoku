@@ -18,5 +18,5 @@
 | アルゴリズム名 | クラス名 | ruby | java | kotlin |
 | - | - | - | - | - |
 | セグメント木 | SegmentTree | [ruby](ruby/lib/segment_tree.rb) | | |
-| 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | | [kotlin](src/main/kotlin/lib/UnionFind.kt) |
+| 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | [java](src/main/java/jv/lib/UnionFind.java) | [kotlin](src/main/kotlin/ktln/lib/UnionFind.kt) |
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | |
