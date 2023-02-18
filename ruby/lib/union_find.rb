@@ -4,7 +4,7 @@ class UnionFind
   attr_accessor :parents
 
   def initialize(size)
-    @parents = Array.new(size, &:itself)
+    @parents = Array.new(size + 1, &:itself)
   end
 
   def root(u)
