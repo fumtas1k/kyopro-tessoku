@@ -12,7 +12,8 @@ class SegmentTree
     @operator = method
     @id_elm = id_elm
     @leaf_size = 1 << (n - 1).bit_length
-    @tree = [id_elm] * leaf_size + arr
+    @tree = [id_elm] * 2 * leaf_size
+    n.times { tree[leaf_size + _1] = arr[_1] }
     (leaf_size - 1).downto(1) do |i|
       tree[i] = operator.call(tree[i * 2], tree[i * 2 + 1])
     end
@@ -34,7 +35,7 @@ class SegmentTree
   # [l, r)　求めたい半開区間
   # [a, b) 現在の半開区間
   # u 現在のセル番号
-  def query(l, r, a, b, u)
+  def query(l, r, a = 1, b = leaf_size + 1, u = 1)
     return id_elm if r <= a || b <= l
     return tree[u] if l <= a && b <= r
     mid = (a + b) / 2

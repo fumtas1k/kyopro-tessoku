@@ -12,8 +12,8 @@ class SegmentTree
     @operator = method
     @id_elm = id_elm
     @leaf_size = 1 << (n - 1).bit_length
-    @tree = [id_elm] * leaf_size
-    @tree.concat(arr)
+    @tree = [id_elm] * 2 * leaf_size
+    n.times { tree[leaf_size + _1] = arr[_1] }
     (leaf_size - 1).downto(1) do |i|
       tree[i] = operator.call(tree[i * 2], tree[i * 2 + 1])
     end
@@ -28,7 +28,7 @@ class SegmentTree
     end
   end
 
-  def query(l, r, a, b, u)
+  def query(l, r, a = 1, b = leaf_size + 1, u = 1)
     return id_elm if r <= a || b <= l
     return tree[u] if l <= a && b <= r
     mid = (a + b) / 2
@@ -50,7 +50,7 @@ QUERY.each do |query|
   when 1
     seg_tree.update(*query[1, 2])
   when 2
-    puts seg_tree.query(*query[1, 2], 1, seg_tree.leaf_size + 1, 1)
+    puts seg_tree.query(*query[1, 2])
   end
 end
 
