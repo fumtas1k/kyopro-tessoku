@@ -1,5 +1,6 @@
 require_relative "../lib/priority_queue"
 
+# 優先度付キューのテスト
 RSpec.describe PriorityQueue do
   let(:priority_queue) { PriorityQueue.new }
   context "8個の要素をプッシュした場合" do
