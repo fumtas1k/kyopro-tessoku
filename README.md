@@ -20,3 +20,4 @@
 | セグメント木 | SegmentTree | [ruby](ruby/lib/segment_tree.rb) | | |
 | 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | [java](src/main/java/jv/lib/UnionFind.java) | [kotlin](src/main/kotlin/ktln/lib/UnionFind.kt) |
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | |
+| 優先度付キュー | PriorityQueue | [ruby](ruby/lib/priority_queue.rb) | | |
