@@ -15,7 +15,7 @@ internal class UnionFindTest {
   private lateinit var unionFind: UnionFind
 
   @BeforeEach
-  fun setup() {
+  fun setUp() {
     unionFind = UnionFind(10)
   }
 

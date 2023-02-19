@@ -17,7 +17,7 @@ internal class SegmentTreeWTest {
   @Nested
   inner class 加算 {
     @BeforeEach
-    fun setup() {
+    fun setUp() {
       segmentTreeW = SegmentTreeW(arr, 0L) { a, b -> a + b }
     }
 
@@ -45,7 +45,7 @@ internal class SegmentTreeWTest {
   @Nested
   inner class 最大値 {
     @BeforeEach
-    fun setup() {
+    fun setUp() {
       segmentTreeW = SegmentTreeW(arr, Long.MIN_VALUE, ::max)
     }
 
