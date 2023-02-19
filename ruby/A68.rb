@@ -4,11 +4,11 @@
 
 start_time = Time.now
 
-Edge = Struct.new(:to, :cap, :rev)
-
-class MaximumFlow
+class MaxFlow
 
   attr_accessor :size, :used, :graph
+
+  Edge = Struct.new(:to, :cap, :rev)
 
   def initialize(size)
     @size = size + 1
@@ -16,12 +16,12 @@ class MaximumFlow
     @graph = Array.new(@size) { [] }
   end
 
-  # 頂点u -> 頂点v, 上限c の辺追加
-  def add_edge(a, b, c)
-    graph_a_size = graph[a].size
-    graph_b_size = graph[b].size
-    graph[a] << Edge.new(b, c, graph_b_size)
-    graph[b] << Edge.new(a, 0, graph_a_size)
+  # 頂点from -> 頂点to, 上限cap の辺追加
+  def add_edge(from, to, cap)
+    graph_from_size = graph[from].size
+    graph_to_size = graph[to].size
+    graph[from] << Edge.new(to, cap, graph_to_size)
+    graph[to] << Edge.new(from, 0, graph_from_size)
   end
 
   def dfs(pos, goal, min_flow)
@@ -55,7 +55,7 @@ File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") d
   ABC = Array.new(M) { f.gets.split.map(&:to_i) }
 end
 
-mf = MaximumFlow.new(N)
+mf = MaxFlow.new(N)
 ABC.each do |abc|
   mf.add_edge(*abc)
 end
