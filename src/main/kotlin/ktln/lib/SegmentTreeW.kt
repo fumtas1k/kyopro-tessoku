@@ -50,13 +50,14 @@ class SegmentTreeW(
     if (l < 1 || l >= r) return idElm
     var left = l + leafSize - 1
     var right = r + leafSize - 2
-    var result = idElm
+    var sml = idElm
+    var smr = idElm
     while (left <= right) {
-      if (left % 2 == 1) result = operator(result, tree[left++])
-      if (right % 2 == 0) result = operator(result, tree[right--])
+      if (left % 2 == 1) sml = operator(sml, tree[left++])
+      if (right % 2 == 0) smr = operator(smr, tree[right--])
       left /= 2
       right /= 2
     }
-    return result
+    return operator(sml, smr)
   }
 }
