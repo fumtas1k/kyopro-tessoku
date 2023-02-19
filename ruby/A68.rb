@@ -8,7 +8,7 @@ class MaxFlow
 
   attr_accessor :size, :used, :graph
 
-  Edge = Struct.new(:to, :cap, :rev)
+  Edge = Struct.new(:to, :to_idx, :cap)
 
   def initialize(size)
     @size = size + 1
@@ -20,8 +20,8 @@ class MaxFlow
   def add_edge(from, to, cap)
     graph_from_size = graph[from].size
     graph_to_size = graph[to].size
-    graph[from] << Edge.new(to, cap, graph_to_size)
-    graph[to] << Edge.new(from, 0, graph_from_size)
+    graph[from] << Edge.new(to, graph_to_size, cap)
+    graph[to] << Edge.new(from, graph_from_size, 0)
   end
 
   def dfs(pos, goal, min_flow)
@@ -32,7 +32,7 @@ class MaxFlow
       flow = dfs(edge.to, goal, [min_flow, edge.cap].min)
       next if flow.zero?
       edge.cap -= flow
-      graph[edge.to][edge.rev].cap += flow
+      graph[edge.to][edge.to_idx].cap += flow
       return flow
     end
     0
