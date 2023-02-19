@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.8.0"
+    kotlin("jvm") version "1.8.10"
 }
 
 group = "org.example"
@@ -21,3 +21,5 @@ tasks.test {
 kotlin {
     jvmToolchain(11)
 }
+
+tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.INHERIT }
