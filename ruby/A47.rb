@@ -34,7 +34,7 @@ File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") d
 
   current_dist = measure_total_dist(order, dists)
 
-  TRIAL_COUNT.times do |t|
+  TRIAL_COUNT.times do |i|
     l, r = [rand(1 ... N), rand(1 ... N)].minmax
     order_clone = order.dup
     order_clone[l .. r] = order_clone[l .. r].reverse
