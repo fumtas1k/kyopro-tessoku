@@ -1,8 +1,11 @@
 package ktln.lib
 
+import org.junit.jupiter.api.Assertions.assertIterableEquals
 import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
-import java.io.File
+import kotlin.reflect.full.memberProperties
+import kotlin.reflect.jvm.isAccessible
 import kotlin.test.assertEquals
 
 /**
@@ -13,23 +16,44 @@ class MaxFlowTest {
 
   private lateinit var maxFlow: MaxFlow
 
-  @BeforeEach
-  fun setUp() {
-    File("question/A68.txt").readLines().forEachIndexed {idx, line ->
-      if (idx == 0) {
-        val (n, _) = line.split(" ").map(String::toInt)
-        maxFlow = MaxFlow(n)
-      } else {
-        val (a, b, c) = line.split(" ").let { Triple(it[0].toInt(), it[1].toInt(), it[2].toLong()) }
-        maxFlow.addEdge(a, b, c)
-      }
-    }
+  @Test
+  fun addEdgeで流量が追加できる() {
+    maxFlow = MaxFlow(2)
+    maxFlow.addEdge(1, 2, 5)
+    val expected = mutableListOf(
+      mutableListOf<MaxFlow.Edge>(),
+      mutableListOf(MaxFlow.Edge(2, 0, 5)),
+      mutableListOf(MaxFlow.Edge(1, 0, 0))
+      )
+    val property = MaxFlow::class.memberProperties.first { it.name == "graph" }
+    property.isAccessible = true
+    val actual = property.get(maxFlow) as MutableList<MutableList<MaxFlow.Edge>>
+    assertIterableEquals(expected, actual)
   }
 
-  @Test
-  fun 例題のテスト() {
-    val expected = File("answer/A68.txt").readLines()[0].toLong()
-    val actual = maxFlow.calculateMaxFlow(1, maxFlow.size)
-    assertEquals(expected, actual)
+  @Nested
+  inner class calculateMaxFlow {
+    @BeforeEach
+    fun setUp() {
+      maxFlow = MaxFlow(3)
+    }
+
+    @Test
+    fun 最大流量が得られる() {
+      maxFlow.addEdge(1, 2, 5)
+      maxFlow.addEdge(2, 3, 2)
+      val expected = 2L
+      val actual = maxFlow.calculateMaxFlow(1, 3)
+      assertEquals(expected, actual)
+    }
+
+    @Test
+    fun 一部の流量が0の場合最大流量は0() {
+      maxFlow.addEdge(1, 2, 5)
+      maxFlow.addEdge(2, 3, 0)
+      val expected = 0L
+      val actual = maxFlow.calculateMaxFlow(1, 3)
+      assertEquals(expected, actual)
+    }
   }
 }

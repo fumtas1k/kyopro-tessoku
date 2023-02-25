@@ -7,7 +7,7 @@ import kotlin.math.min
  *
  * @property size 頂点の数
  */
-class MaxFlow(val size: Int) {
+class MaxFlow(private val size: Int) {
 
   /**
    * 辺
