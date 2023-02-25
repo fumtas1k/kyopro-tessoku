@@ -29,10 +29,10 @@ class MaxFlow(val size: Int) {
    * @param cap キャパシティ
    */
   fun addEdge(from: Int, to: Int, cap: Long) {
-    val graphFromSize = graph[from].size
-    val graphToSize = graph[to].size
-    graph[from].add(Edge(to, graphToSize, cap))
-    graph[to].add(Edge(from, graphFromSize, 0L))
+    val fromIdx = graph[from].size
+    val toIdx = graph[to].size
+    graph[from].add(Edge(to, toIdx, cap))
+    graph[to].add(Edge(from, fromIdx, 0L))
   }
 
   /**
@@ -45,7 +45,7 @@ class MaxFlow(val size: Int) {
   fun calculateMaxFlow(u: Int, v: Int): Long {
     var totalFlow = 0L
     while (true) {
-      repeat(size + 1) { used[it] = false }
+      used.fill(false)
       val flow = dfs(u, v, Long.MAX_VALUE)
       if (flow == 0L) break
       totalFlow += flow
