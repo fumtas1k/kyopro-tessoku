@@ -1,25 +1,25 @@
 plugins {
-    kotlin("jvm") version "1.8.10"
+  kotlin("jvm") version "1.8.10"
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.10")
+  testImplementation(kotlin("test"))
+  implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.10")
 }
 
 tasks.test {
-    useJUnitPlatform()
+  useJUnitPlatform()
 }
 
 kotlin {
-    jvmToolchain(11)
+  jvmToolchain(11)
 }
 
-tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.INHERIT }
+tasks.withType<Jar> { duplicatesStrategy = DuplicatesStrategy.INCLUDE }
