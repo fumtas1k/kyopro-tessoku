@@ -11,7 +11,7 @@
 | [A59](question/A59.txt) | セグメント木(RSQ) | [ruby](ruby/A59.rb) | | |
 | [A64](question/A64.txt) | ダイクストラ法 | [ruby](ruby/A64.rb) | | |
 | [A67](question/A67.txt) | 最小全域木, クラスカル法 | [ruby](ruby/A67.rb) | | |
-| [A68](question/A68.txt) | 最大流量, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | |
+| [A68](question/A68.txt) | 最大流量, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | [kotlin](src/main/kotlin/ktln/A68.kt) |
 
 ## ライブラリ
 
@@ -21,4 +21,4 @@
 | 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | [java](src/main/java/jv/lib/UnionFind.java) | [kotlin](src/main/kotlin/ktln/lib/UnionFind.kt) |
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | |
 | 優先度付キュー | PriorityQueue | [ruby](ruby/lib/priority_queue.rb) | | |
-| 最大流量 | MaxFlow | | | [kotlin](src/main/kotlin/ktln/lib/MaxFlow.kt) |
+| 最大流量 | MaxFlow | [ruby](ruby/lib/max_flow.rb) | | [kotlin](src/main/kotlin/ktln/lib/MaxFlow.kt) |
