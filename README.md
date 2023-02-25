@@ -9,6 +9,7 @@
 | [A41](question/A41.txt) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A46](question/A46.txt) | Heuristic, 貪欲法 | [ruby](ruby/A46.rb) | | |
 | [A47](question/A47.txt) | Heuristic, 局所探索法 | [ruby](ruby/A47.rb) | | |
+| [A48](question/A48.txt) | Heuristic, 焼きなまし法 | [ruby](ruby/A48.rb) | | |
 | [A56](question/A56.txt) | ハッシュ | [ruby](ruby/A56.rb) | | |
 | [A57](question/A57.txt) | ダブリング | [ruby](ruby/A57.rb) | | |
 | [A58](question/A58.txt) | セグメント木(RMQ) | [ruby](ruby/A58.rb) | | |
