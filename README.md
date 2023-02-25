@@ -5,6 +5,8 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin |
 | - | - | - | - | - |
+| [A40](question/A40.txt) | 個数を考える | [ruby](ruby/A40.rb) | | |
+| [A41](question/A41.txt) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A56](question/A56.txt) | ハッシュ | [ruby](ruby/A56.rb) | | |
 | [A57](question/A57.txt) | ダブリング | [ruby](ruby/A57.rb) | | |
 | [A58](question/A58.txt) | セグメント木(RMQ) | [ruby](ruby/A58.rb) | | |
