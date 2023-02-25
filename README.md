@@ -12,7 +12,8 @@
 | [A64](question/A64.txt) | ダイクストラ法 | [ruby](ruby/A64.rb) | | |
 | [A67](question/A67.txt) | 最小全域木, クラスカル法 | [ruby](ruby/A67.rb) | | |
 | [A68](question/A68.txt) | 最大流量, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | [kotlin](src/main/kotlin/ktln/A68.kt) |
-
+| [A69](question/A69.txt) | 二部マッチング, Ford-Fulkerson法 | [ruby]
+(ruby/A69.rb) | | |
 ## ライブラリ
 
 | アルゴリズム名 | クラス名 | ruby | java | kotlin |
