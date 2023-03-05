@@ -9,6 +9,7 @@
 | [A24](question/A24.txt) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/A24.rb) | | |
 | [A25](question/A25.txt) | 動的計画法, Number of Routes | [ruby](ruby/A25.rb) | | |
 | [A26](question/A26-01.txt) | 素数判定 | [ruby1](ruby/A26-01.rb), [ruby2](ruby/A26-02.rb) | | |
+| [A29](question/A29.txt) | 累乗 | [ruby](ruby/A29.rb) | | |
 | [A40](question/A40.txt) | 個数を考える | [ruby](ruby/A40.rb) | | |
 | [A41](question/A41.txt) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A46](question/A46.txt) | Heuristic, 貪欲法 | [ruby](ruby/A46.rb) | | |
