@@ -5,6 +5,7 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin |
 | - | - | - | - | - |
+| [A26](question/A26.txt) | 素数判定 | [ruby](ruby/A26.rb) | | |
 | [A40](question/A40.txt) | 個数を考える | [ruby](ruby/A40.rb) | | |
 | [A41](question/A41.txt) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A46](question/A46.txt) | Heuristic, 貪欲法 | [ruby](ruby/A46.rb) | | |
