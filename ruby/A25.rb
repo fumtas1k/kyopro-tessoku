@@ -1,4 +1,5 @@
 # A25
+# 動的計画法
 # Number of Routes
 # 実行時間: 1s以内
 
