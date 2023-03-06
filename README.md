@@ -6,6 +6,7 @@
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin |
 | - | - | - | - | - |
 | [A20](question/A20.txt) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
+| [A23](question/A23.txt) | 動的計画法, bitDP | [ruby](ruby/A23.rb) | | |
 | [A24](question/A24.txt) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/A24.rb) | | |
 | [A25](question/A25.txt) | 動的計画法, Number of Routes | [ruby](ruby/A25.rb) | | |
 | [A26](question/A26-01.txt) | 素数判定 | [ruby1](ruby/A26-01.rb), [ruby2](ruby/A26-02.rb) | | |
