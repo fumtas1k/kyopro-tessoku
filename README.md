@@ -5,6 +5,8 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin |
 | - | - | - | - | - |
+| [A16](question/A16.txt) | 動的計画法 | [ruby](ruby/A16.rb) | | |
+| [A17](question/A17.txt) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
 | [A20](question/A20.txt) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
 | [A23](question/A23.txt) | 動的計画法, bitDP | [ruby](ruby/A23.rb) | | |
 | [A24](question/A24.txt) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/A24.rb) | | |
