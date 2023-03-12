@@ -25,10 +25,13 @@
 | [A57](question/A57.txt) | ダブリング | [ruby](ruby/A57.rb) | | |
 | [A58](question/A58.txt) | セグメント木(RMQ) | [ruby](ruby/A58.rb) | | |
 | [A59](question/A59.txt) | セグメント木(RSQ) | [ruby](ruby/A59.rb) | | |
+| [A62](question/A62.txt) | 深さ優先探索(DFS) | [ruby](ruby/A62.rb) | | |
+| [A63](question/A63.txt) | 幅優先探索(BFS) | [ruby](ruby/A63.rb) | | |
 | [A64](question/A64.txt) | ダイクストラ法 | [ruby](ruby/A64.rb) | | |
 | [A67](question/A67.txt) | 最小全域木, クラスカル法 | [ruby](ruby/A67.rb) | | |
 | [A68](question/A68.txt) | 最大流量, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | [kotlin](src/main/kotlin/ktln/A68.kt) |
 | [A69](question/A69.txt) | 二部マッチング, Ford-Fulkerson法 | [ruby](ruby/A69.rb) | | |
+
 ## ライブラリ
 
 | アルゴリズム名 | クラス名 | ruby | java | kotlin |
