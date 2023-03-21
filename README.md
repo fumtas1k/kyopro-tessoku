@@ -32,6 +32,7 @@
 | [A68](question/A68.txt) | 最大流量, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | [kotlin](src/main/kotlin/ktln/A68.kt) |
 | [A69](question/A69.txt) | 二部マッチング, Ford-Fulkerson法 | [ruby](ruby/A69.rb) | | |
 | [A72](question/A72.txt) | bit全探索 | [ruby](ruby/A72.rb) | | |
+| [A74](question/A74.txt) | 分解して考える | [ruby](ruby/A74.rb) | | |
 
 ## ライブラリ
 
