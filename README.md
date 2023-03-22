@@ -5,6 +5,7 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin |
 | - | - | - | - | - |
+| [A13](question/A13.txt) | しゃくとり法 | [ruby](ruby/A13.rb) | | |
 | [A16](question/A16.txt) | 動的計画法 | [ruby](ruby/A16.rb) | | |
 | [A17](question/A17.txt) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
 | [A20](question/A20.txt) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
