@@ -16,6 +16,7 @@
 | [A29](question/A29.txt) | 累乗 | [ruby](ruby/A29.rb) | | |
 | [A30](question/A30.txt) | フェルマーの小定理 | [ruby](ruby/A30.rb) | | |
 | [A33](question/A33.txt) | ニム | [ruby](ruby/A33.rb) | | |
+| [A38](question/A38.txt) | 上限値 | [ruby](ruby/A38.rb) | | |
 | [A39](question/A39.txt) | 貪欲法 | [ruby](ruby/A39.rb) | | |
 | [A40](question/A40.txt) | 個数を考える | [ruby](ruby/A40.rb) | | |
 | [A41](question/A41.txt) | 後ろから考える | [ruby](ruby/A41.rb) | | |
