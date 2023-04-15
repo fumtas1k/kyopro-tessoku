@@ -36,6 +36,7 @@
 | [A72](question/A72.txt) | bit全探索 | [ruby](ruby/A72.rb) | | |
 | [A73](question/A73.txt) | ダイクストラ法, わずかなボーナス | [ruby](ruby/A73.rb) | | |
 | [A74](question/A74.txt) | 分解して考える | [ruby](ruby/A74.rb) | | |
+| [A75](question/A75.txt) | 貪欲法, 動的計画法 | [ruby](ruby/A75.rb) | | |
 
 ## ライブラリ
 
