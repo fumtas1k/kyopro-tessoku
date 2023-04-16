@@ -3,6 +3,8 @@
 # Depth First Search(DFS)
 # 1s以内
 
+start_time = Time.now
+
 File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
   N = f.gets.to_i
   G = Array.new(N + 1) { [] }
@@ -22,3 +24,5 @@ end
 dfs(1)
 
 puts @ans[1..].join(" ")
+
+puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"
