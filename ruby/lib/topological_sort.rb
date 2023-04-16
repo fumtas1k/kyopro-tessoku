@@ -1,4 +1,5 @@
 # トポロジカルソート
+# 大小関係から 1 .. size の並び替え配列を求める
 
 class TopologicalSort
   attr_accessor :degree, :graph
@@ -16,17 +17,17 @@ class TopologicalSort
   def sort
     deque = degree[1..].map.with_index {|d, i| i + 1 if d.zero? }.compact
     result = []
-    cnt = 1
+    order = 1
     until deque.empty?
       return [] unless deque.size == 1
       small = deque.shift
-      result[small] = cnt
-      cnt += 1
+      result[small] = order
+      order += 1
       graph[small].each do |large|
         degree[large] -= 1
         deque << large if degree[large].zero?
       end
     end
-    return result
+    result[1..]
   end
 end
