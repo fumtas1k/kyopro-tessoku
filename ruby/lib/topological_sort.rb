@@ -15,7 +15,7 @@ class TopologicalSort
   end
 
   def sort
-    deque = degree[1..].map.with_index {|d, i| i + 1 if d.zero? }.compact
+    deque = (1..degree.size - 1).filter { degree[_1].zero? }
     result = []
     order = 1
     until deque.empty?
