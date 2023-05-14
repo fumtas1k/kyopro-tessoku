@@ -24,6 +24,7 @@
 | [A42](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ap) | 固定(下限値)した全探索 | [ruby](ruby/A42.rb) | | |
 | [A43](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_aq) | 問題を言い換える | [ruby](ruby/A43.rb) | | |
 | [A44](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ar) | データの持ち方を工夫する | [ruby](ruby/A44.rb) | | |
+| [A45](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_as) | 不変量に着目する | [ruby](ruby/A45.rb) | | |
 | [A46](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_at) | Heuristic, 貪欲法 | [ruby](ruby/A46.rb) | | |
 | [A47](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_at) | Heuristic, 局所探索法 | [ruby](ruby/A47.rb) | | |
 | [A48](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_at) | Heuristic, 焼きなまし法 | [ruby](ruby/A48.rb) | | |
