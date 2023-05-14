@@ -23,6 +23,7 @@
 | [A41](question/A41.txt) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A42](question/A42.txt) | 固定(下限値)した全探索 | [ruby](ruby/A42.rb) | | |
 | [A43](question/A43.txt) | 問題を言い換える | [ruby](ruby/A43.rb) | | |
+| [A44](question/A44.txt) | データの持ち方を工夫する | [ruby](ruby/A44.rb) | | |
 | [A46](question/A46.txt) | Heuristic, 貪欲法 | [ruby](ruby/A46.rb) | | |
 | [A47](question/A47.txt) | Heuristic, 局所探索法 | [ruby](ruby/A47.rb) | | |
 | [A48](question/A48.txt) | Heuristic, 焼きなまし法 | [ruby](ruby/A48.rb) | | |
