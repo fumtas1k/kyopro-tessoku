@@ -1,5 +1,5 @@
 # kyopro-tessoku
-競技プログラミングの鉄則の解答
+[競技プログラミングの鉄則](https://atcoder.jp/contests/tessoku-book)の解答
 
 ## 各論
 
