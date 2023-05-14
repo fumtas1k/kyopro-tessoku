@@ -2,10 +2,8 @@
 # bit全探索
 # 1s 以内
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  H, W, K = f.gets.split.map(&:to_i)
-  C = Array.new(H) { f.gets.chomp.chars.map { _1 == "#" ? 1 : 0 } }
-end
+H, W, K = gets.split.map(&:to_i)
+C = Array.new(H) { gets.chomp.chars.map { _1 == "#" ? 1 : 0 } }
 
 ans = []
 (1 << H).times do |bit|

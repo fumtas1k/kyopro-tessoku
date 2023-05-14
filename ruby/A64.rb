@@ -1,8 +1,6 @@
 # A64
 # ダイクストラ法
 
-start_time = Time.now
-
 def dijukstra(start, n, graph)
   dist = [Float::INFINITY] * (n + 1)
   dist[start] = 0
@@ -27,16 +25,12 @@ def dijukstra(start, n, graph)
   dist[1..]
 end
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N, M = f.gets.split.map(&:to_i)
-  G = Array.new(N + 1) { [] }
-  M.times do
-    a, b, c = f.gets.split.map(&:to_i)
-    G[a] << [b, c]
-    G[b] << [a, c]
-  end
+N, M = gets.split.map(&:to_i)
+G = Array.new(N + 1) { [] }
+M.times do
+  a, b, c = gets.split.map(&:to_i)
+  G[a] << [b, c]
+  G[b] << [a, c]
 end
 
 puts dijukstra(1, N, G)
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"

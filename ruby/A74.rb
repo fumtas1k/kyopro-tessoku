@@ -4,14 +4,13 @@
 
 row = []
 column = []
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N = f.gets.to_i
-  N.times do |i|
-    p = f.gets.split.map(&:to_i)
-    N.times do |j|
-      next if p[j].zero?
-      row[i] = column[j] = p[j]
-    end
+
+N = gets.to_i
+N.times do |i|
+  p = gets.split.map(&:to_i)
+  N.times do |j|
+    next if p[j].zero?
+    row[i] = column[j] = p[j]
   end
 end
 

@@ -2,10 +2,8 @@
 # しゃくとり法
 # 1s以内
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N, K = f.gets.split.map(&:to_i)
-  A = f.gets.split.map(&:to_i)
-end
+  N, K = gets.split.map(&:to_i)
+  A = gets.split.map(&:to_i)
 
 r = 0
 ans = 0

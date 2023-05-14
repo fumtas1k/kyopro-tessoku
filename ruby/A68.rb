@@ -2,8 +2,6 @@
 # Ford-Fulkerson法
 # Maximum Flow
 
-start_time = Time.now
-
 class MaxFlow
 
   attr_accessor :size, :used, :graph
@@ -50,10 +48,8 @@ class MaxFlow
   end
 end
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N, M = f.gets.split.map(&:to_i)
-  ABC = Array.new(M) { f.gets.split.map(&:to_i) }
-end
+N, M = gets.split.map(&:to_i)
+ABC = Array.new(M) { gets.split.map(&:to_i) }
 
 mf = MaxFlow.new(N)
 ABC.each do |abc|
@@ -61,5 +57,3 @@ ABC.each do |abc|
 end
 
 puts mf.max_flow(1, N)
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"

@@ -2,12 +2,9 @@
 # 区間DP
 # 1s以内
 
-start_time = Time.now
+N = gets.to_i
+PA = [[]] + Array.new(N) { gets.split.map(&:to_i) }
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N = f.gets.to_i
-  PA = [[]] + Array.new(N) { f.gets.split.map(&:to_i) }
-end
 dp = Array.new(N + 1) { [0] * (N + 1) }
 
 (N - 2).downto(0) do |len|

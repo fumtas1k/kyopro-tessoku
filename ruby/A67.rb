@@ -3,8 +3,6 @@
 # クラスカル法(貪欲法 + Union-Find木)
 # 実行時間: 1s以内
 
-start_time = Time.now
-
 class UnionFind
   attr_accessor :parents
 
@@ -28,10 +26,8 @@ class UnionFind
   end
 end
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N, M = f.gets.split.map(&:to_i)
-  ABC = Array.new(M) { f.gets.split.map(&:to_i) }.sort_by { _1[-1] }
-end
+N, M = gets.split.map(&:to_i)
+ABC = Array.new(M) { gets.split.map(&:to_i) }.sort_by { _1[-1] }
 
 uf = UnionFind.new(N + 1)
 
@@ -45,5 +41,3 @@ ans = ABC.sum do |a, b, c|
 end
 
 puts ans
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"

@@ -2,8 +2,6 @@
 # セグメント木(RMQ)
 # 実行時間: 3s以内
 
-start_time = Time.now
-
 class SegmentTree
   attr_accessor :leaf_size, :operator, :id_elm, :tree
 
@@ -38,10 +36,8 @@ class SegmentTree
   end
 end
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N, Q = f.gets.split.map(&:to_i)
-  QUERY = Array.new(Q) { f.gets.split.map(&:to_i) }
-end
+N, Q = gets.split.map(&:to_i)
+QUERY = Array.new(Q) { gets.split.map(&:to_i) }
 
 seg_tree = SegmentTree.new([0] * N, -1) {|i, j| [i, j].max }
 
@@ -53,5 +49,3 @@ QUERY.each do |query|
     puts seg_tree.query(*query[1, 2], 1, seg_tree.leaf_size + 1, 1)
   end
 end
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"

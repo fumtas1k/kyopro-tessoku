@@ -3,12 +3,8 @@
 # Heuristic
 # 実行時間: 1s以内
 
-start_time = Time.now
-
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  T = f.gets.to_i
-  PQR = Array.new(T) { f.gets.split.map { _1.to_i - 1 } }
-end
+T = gets.to_i
+PQR = Array.new(T) { gets.split.map { _1.to_i - 1 } }
 
 State = Struct.new(:score, :x, :last_move, :last_pos) {
   def <=>(other)
@@ -61,5 +57,3 @@ T.downto(1) do |i|
 end
 
 puts ans[1..]
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"

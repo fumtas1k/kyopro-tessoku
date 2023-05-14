@@ -6,14 +6,12 @@
 # 小数点計算しないようにするため道路の長さに下駄を履かせる。N <= 8000より値を設定
 UP = 10 ** 4
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).txt}", "r") do |f|
-  N, M = f.gets.split.map(&:to_i)
-  G = Array.new(N + 1) { [] }
-  M.times do
-    a, b, c, d = gets.split.map(&:to_i)
-    G[a] << [b, c * UP - d]
-    G[b] << [a, c * UP - d]
-  end
+N, M = gets.split.map(&:to_i)
+G = Array.new(N + 1) { [] }
+M.times do
+  a, b, c, d = gets.split.map(&:to_i)
+  G[a] << [b, c * UP - d]
+  G[b] << [a, c * UP - d]
 end
 
 def dijkstra(start)
@@ -34,5 +32,3 @@ end
 
 dist_up = dijkstra(1)[-1]
 dist = (dist_up / UP.to_f).ceil
-
-puts [dist, dist * UP - dist_up].join(" ")

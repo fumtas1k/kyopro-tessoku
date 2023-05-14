@@ -2,8 +2,6 @@
 # 累乗
 # 実行時間: 1s以内
 
-start_time = Time.now
-
 M = 10 ** 9 + 7
 
 def power(a, b, m)
@@ -36,11 +34,7 @@ def pow(a, b, m)
   result
 end
 
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  a, b = f.gets.split.map(&:to_i)
-  # puts power(a, b, M)
-  puts pow(a, b, M)
-  # puts a.pow(b, M)
-end
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"
+a, b = gets.split.map(&:to_i)
+# puts power(a, b, M)
+puts pow(a, b, M)
+# puts a.pow(b, M)

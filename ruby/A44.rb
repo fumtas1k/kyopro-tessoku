@@ -2,12 +2,8 @@
 # データの持ち方を工夫する
 # 実行時間: 1s以内
 
-start_time = Time.now
-
-File.open("question/#{File.basename(__FILE__).split(/\.rb$/).first}.txt", "r") do |f|
-  N, Q = f.gets.split.map(&:to_i)
-  QUERY = Array.new(Q) { f.gets.split.map(&:to_i) }
-end
+N, Q = gets.split.map(&:to_i)
+QUERY = Array.new(Q) { gets.split.map(&:to_i) }
 
 A = [*0 .. N]
 rev = false
@@ -25,5 +21,3 @@ QUERY.each do |q|
     puts rev ? A[N - q[1] + 1] : A[q[1]]
   end
 end
-
-puts "\n処理時間: #{((Time.now - start_time) * 1_000).round(2)} ms"
