@@ -31,7 +31,7 @@ class UnionFind(private val size: Int) {
 
 fun main() {
   val (N, M) = readLine()!!.split(" ").map(String::toInt)
-  val ABC = Array(M) { readLine()!!.split(" ").map(String::toInt) }.sortedWith(compareBy({it.last()}))
+  val ABC = Array(M) { readLine()!!.split(" ").map(String::toInt) }.sortedBy { it.last() }
 
   var ans = 0
   val uf = UnionFind(N + 1)
