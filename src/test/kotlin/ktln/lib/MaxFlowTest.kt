@@ -1,11 +1,11 @@
 package ktln.lib
 
-import org.junit.jupiter.api.Assertions.assertIterableEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
+import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 
 /**
@@ -20,15 +20,15 @@ class MaxFlowTest {
   fun addEdgeで流量が追加できる() {
     maxFlow = MaxFlow(2)
     maxFlow.addEdge(1, 2, 5)
-    val expected = arrayOf(
+    val expected = listOf(
       mutableListOf<MaxFlow.Edge>(),
       mutableListOf(MaxFlow.Edge(2, 0, 5)),
       mutableListOf(MaxFlow.Edge(1, 0, 0))
       )
     val property = MaxFlow::class.memberProperties.first { it.name == "graph" }
     property.isAccessible = true
-    val actual = property.get(maxFlow) as Array<MutableList<MaxFlow.Edge>>
-    assertIterableEquals(expected, actual)
+    val actual = property.get(maxFlow) as List<MutableList<MaxFlow.Edge>>
+    assertContentEquals(expected, actual)
   }
 
   @Nested

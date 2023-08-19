@@ -22,7 +22,7 @@ class MaxFlow(private val size: Int) {
   data class Edge(val to: Int, val toIdx: Int, var cap: Long)
 
   private val used = BooleanArray(size + 1) { false }
-  private val graph = Array(size + 1) { mutableListOf<Edge>() }
+  private val graph = List(size + 1) { mutableListOf<Edge>() }
 
   /**
    * 辺追加
