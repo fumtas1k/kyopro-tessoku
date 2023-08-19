@@ -23,7 +23,7 @@ internal class UnionFindTest {
   fun isSameで親が同じものを同じと判定できる() {
     val parentsKProperty = UnionFind::class.memberProperties.first { it.name == "parents" }
     parentsKProperty.isAccessible = true
-    val parents = parentsKProperty.get(unionFind) as MutableList<Int>
+    val parents = parentsKProperty.get(unionFind) as IntArray
     parents[2] = 1
     assert(unionFind.isSame(1, 2))
   }

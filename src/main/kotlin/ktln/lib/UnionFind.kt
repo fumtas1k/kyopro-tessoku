@@ -7,7 +7,18 @@ package ktln.lib
  */
 class UnionFind(private val size: Int) {
 
-  private val parents = MutableList(size + 1) { it }
+  private val parents = IntArray(size + 1) { it }
+
+  /**
+   * 親を取得
+   * @param u 要素番号
+   * @return 親番号
+   */
+  private fun root(u: Int): Int {
+    if (u == parents[u]) return u
+    parents[u] = root(parents[u])
+    return parents[u]
+  }
 
   /**
    * 結合
@@ -28,15 +39,4 @@ class UnionFind(private val size: Int) {
    * @return true or false
    */
   fun isSame(u: Int, v: Int): Boolean = root(u) == root(v)
-
-  /**
-   * 親を取得
-   * @param u 要素番号
-   * @return 親番号
-   */
-  private fun root(u: Int): Int {
-    if (u == parents[u]) return u
-    parents[u] = root(parents[u])
-    return parents[u]
-  }
 }
