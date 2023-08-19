@@ -30,8 +30,8 @@
 | [A49](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_aw) | Heuristic, ビームサーチ | [ruby](ruby/A49.rb) | | |
 | [A56](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bd) | ハッシュ | [ruby](ruby/A56.rb) | | |
 | [A57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_be) | ダブリング | [ruby](ruby/A57.rb) | | |
-| [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby](ruby/A58-01.rb), [ruby](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) |
-| [A59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bg) | セグメント木(RSQ) | [ruby](ruby/A59.rb) | | |
+| [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby1](ruby/A58-01.rb), [ruby2](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) |
+| [A59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bg) | セグメント木(RSQ) | [ruby1](ruby/A59-01.rb), [ruby2](ruby/A59-02.rb) | | |
 | [A62](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_am) | 深さ優先探索(DFS) | [ruby](ruby/A62.rb) | | |
 | [A63](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_an) | 幅優先探索(BFS) | [ruby](ruby/A63.rb) | | |
 | [A64](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bl) | ダイクストラ法 | [ruby](ruby/A64.rb) | | |

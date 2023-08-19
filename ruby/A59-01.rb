@@ -18,20 +18,20 @@ class SegmentTree
   end
 
   def update(pos, x)
-    u = pos + leaf_size - 1
-    tree[u] = x
-    while u > 1
-      u /= 2
-      tree[u] = operator.call(tree[u * 2], tree[u * 2 + 1])
+    idx = pos + leaf_size - 1
+    tree[idx] = x
+    while idx > 1
+      idx /= 2
+      tree[idx] = operator.call(tree[idx * 2], tree[idx * 2 + 1])
     end
   end
 
-  def query(l, r, a = 1, b = leaf_size + 1, u = 1)
+  def query(l, r, a = 1, b = leaf_size + 1, idx = 1)
     return id_elm if r <= a || b <= l
-    return tree[u] if l <= a && b <= r
+    return tree[idx] if l <= a && b <= r
     mid = (a + b) / 2
-    left = query(l, r, a, mid, u * 2)
-    right = query(l, r, mid, b, u * 2 + 1)
+    left = query(l, r, a, mid, idx * 2)
+    right = query(l, r, mid, b, idx * 2 + 1)
     operator.call(left, right)
   end
 end
