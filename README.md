@@ -30,13 +30,13 @@
 | [A49](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_aw) | Heuristic, ビームサーチ | [ruby](ruby/A49.rb) | | |
 | [A56](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bd) | ハッシュ | [ruby](ruby/A56.rb) | | |
 | [A57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_be) | ダブリング | [ruby](ruby/A57.rb) | | |
-| [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby](ruby/A58.rb) | | |
+| [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby](ruby/A58.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) |
 | [A59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bg) | セグメント木(RSQ) | [ruby](ruby/A59.rb) | | |
 | [A62](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_am) | 深さ優先探索(DFS) | [ruby](ruby/A62.rb) | | |
 | [A63](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_an) | 幅優先探索(BFS) | [ruby](ruby/A63.rb) | | |
 | [A64](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bl) | ダイクストラ法 | [ruby](ruby/A64.rb) | | |
 | [A65](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bm) | 木に対する動的計画法, 深さ優先探索(DFS) | [ruby1](ruby/A65-01.rb), [ruby2](ruby/A65-02.rb) | | |
-| [A67](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bo) | 最小全域木, クラスカル法 | [ruby](ruby/A67.rb) | | |
+| [A67](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bo) | 最小全域木, クラスカル法 | [ruby](ruby/A67.rb) | | [kotlin](src/main/kotlin/ktln/A67.kt) |
 | [A68](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bp) | 最大流量, Ford-Fulkerson法 | [ruby](ruby/A68.rb) | | [kotlin](src/main/kotlin/ktln/A68.kt) |
 | [A69](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bq) | 二部マッチング, Ford-Fulkerson法 | [ruby](ruby/A69.rb) | | |
 | [A72](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bt) | bit全探索 | [ruby](ruby/A72.rb) | | |

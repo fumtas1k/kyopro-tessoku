@@ -1,18 +1,15 @@
-package ktln.lib
-
 /**
- * セグメント木
- *
- * @property list 対象のリスト
- * @property idElm 単位元(演算メソッドで結果がもう一方の値と同じとなる要素。足し算なら0、掛け算なら1。)
- * @property operator 演算メソッド(合計, 最大値, 最小値などの計算)
+ * A58
+ * セグメント木(RMQ)
+ * 実行時間: 3s以内
  */
+
 class SegmentTreeW(
   private val list: List<Long>,
   private val idElm: Long,
   private val operator: (Long, Long) -> Long
 ) {
-  public val leafSize: Int
+  private val leafSize: Int
   private val tree: LongArray
   init {
     var size = 1
@@ -30,7 +27,7 @@ class SegmentTreeW(
    * @param x 更新する値
    */
   fun update(pos: Int, x: Long) {
-    var idx = pos + leafSize - 1
+    var idx = leafSize + pos - 1
     tree[idx] = x
     while (idx > 1) {
       idx /= 2
@@ -58,5 +55,17 @@ class SegmentTreeW(
       right /= 2
     }
     return operator(leftAns, rightAns)
+  }
+}
+
+fun main() {
+  val (N, Q) = readLine()!!.split(" ").map(String::toInt)
+  val QUERY = Array(Q) { readLine()!!.split(" ").map(String::toInt) }
+  val segmentTree = SegmentTreeW(List(N) { 0L }, 0L) { a, b -> maxOf(a, b) }
+  QUERY.forEach {
+    when (it[0]) {
+      1 -> segmentTree.update(it[1], it[2].toLong())
+      2 -> println(segmentTree.query(it[1], it[2]))
+    }
   }
 }

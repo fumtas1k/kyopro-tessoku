@@ -13,13 +13,13 @@ class SegmentTreeR(
   private val operator: (Long, Long) -> Long
 ) {
   public val leafSize: Int
-  private val tree: MutableList<Long>
+  private val tree: LongArray
 
   init {
     var i = 1
     while (i < arr.size) i *= 2
     leafSize = i
-    tree = MutableList(leafSize * 2) { idElm }
+    tree = LongArray(leafSize * 2) { idElm }
     for (j in arr.indices) tree[leafSize + j] = arr[j]
     for (k in leafSize - 1 downTo 1) tree[k] = operator(tree[2 * k], tree[2 * k + 1])
   }
