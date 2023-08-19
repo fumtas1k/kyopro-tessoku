@@ -1,6 +1,7 @@
 # A68
 # Ford-Fulkerson法
 # Maximum Flow
+# 実行時間: 1s以内
 
 class MaxFlow
 
