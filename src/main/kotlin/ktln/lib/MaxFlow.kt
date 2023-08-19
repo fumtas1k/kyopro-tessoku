@@ -18,8 +18,8 @@ class MaxFlow(private val size: Int) {
    */
   data class Edge(val to: Int, val toIdx: Int, var cap: Long)
 
-  private val used = MutableList(size + 1) { false }
-  private val graph = MutableList(size + 1) { mutableListOf<Edge>() }
+  private val used = BooleanArray(size + 1) { false }
+  private val graph = Array(size + 1) { mutableListOf<Edge>() }
 
   /**
    * 辺追加
@@ -56,10 +56,10 @@ class MaxFlow(private val size: Int) {
   private fun dfs(pos: Int, goal: Int, minFlow: Long): Long {
     if (pos == goal) return minFlow
     used[pos] = true
-    for (edge in graph[pos]) {
-      if (edge.cap == 0L || used[edge.to]) continue
-      val flow = dfs(edge.to, goal, min(minFlow, edge.cap))
-      if (flow == 0L) continue
+    graph[pos].forEach { edge ->
+      if (edge.cap == 0L || used[edge.to]) return@forEach
+      val flow = dfs(edge.to, goal, minOf(minFlow, edge.cap))
+      if (flow == 0L) return@forEach
       edge.cap -= flow
       graph[edge.to][edge.toIdx].cap += flow
       return flow

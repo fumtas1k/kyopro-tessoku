@@ -20,14 +20,14 @@ class MaxFlowTest {
   fun addEdgeで流量が追加できる() {
     maxFlow = MaxFlow(2)
     maxFlow.addEdge(1, 2, 5)
-    val expected = mutableListOf(
+    val expected = arrayOf(
       mutableListOf<MaxFlow.Edge>(),
       mutableListOf(MaxFlow.Edge(2, 0, 5)),
       mutableListOf(MaxFlow.Edge(1, 0, 0))
       )
     val property = MaxFlow::class.memberProperties.first { it.name == "graph" }
     property.isAccessible = true
-    val actual = property.get(maxFlow) as MutableList<MutableList<MaxFlow.Edge>>
+    val actual = property.get(maxFlow) as Array<MutableList<MaxFlow.Edge>>
     assertIterableEquals(expected, actual)
   }
 

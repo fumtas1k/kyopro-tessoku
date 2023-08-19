@@ -1,3 +1,10 @@
+/**
+ * A68
+ * Ford-Fulkerson法
+ * Maximum Flow
+ * 実行時間: 1s以内
+ */
+
 package ktln
 
 import java.io.File
@@ -14,8 +21,8 @@ class MaxFlow(private val size: Int) {
    */
   data class Edge(val to: Int, val toIdx: Int, var cap: Long)
 
-  private val used = MutableList(size + 1) { false }
-  private val graph = MutableList(size + 1) { mutableListOf<Edge>() }
+  private val used = BooleanArray(size + 1) { false }
+  private val graph = Array(size + 1) { mutableListOf<Edge>() }
 
   /**
    * 辺追加
@@ -52,10 +59,10 @@ class MaxFlow(private val size: Int) {
   private fun dfs(pos: Int, goal: Int, minFlow: Long): Long {
     if (pos == goal) return minFlow
     used[pos] = true
-    for (edge in graph[pos]) {
-      if (edge.cap == 0L || used[edge.to]) continue
-      val flow = dfs(edge.to, goal, min(minFlow, edge.cap))
-      if (flow == 0L) continue
+    graph[pos].forEach { edge ->
+      if (edge.cap == 0L || used[edge.to]) return@forEach
+      val flow = dfs(edge.to, goal, minOf(minFlow, edge.cap))
+      if (flow == 0L) return@forEach
       edge.cap -= flow
       graph[edge.to][edge.toIdx].cap += flow
       return flow
@@ -65,14 +72,11 @@ class MaxFlow(private val size: Int) {
 }
 
 fun main() {
-  val lines = File("question/A68.txt").readLines()
-  val (n, m) = lines[0].split(" ").map(String::toInt)
-  val maxFlow = MaxFlow(n)
-  lines.subList(1, m + 1).forEach { line ->
-    val (a, b, c) = line.split(" ").let { Triple(it[0].toInt(), it[1].toInt(), it[2].toLong()) }
+  val (N, M) = readLine()!!.split(" ").map(String::toInt)
+  val maxFlow = MaxFlow(N)
+  repeat(M) {
+    val (a, b, c) = readLine()!!.split(" ").let { Triple(it[0].toInt(), it[1].toInt(), it[2].toLong()) }
     maxFlow.addEdge(a, b, c)
   }
-  val expected = File("answer/A68.txt").readLines()[0].toLong()
-  val actual = maxFlow.calculateMaxFlow(1, n)
-  println(expected == actual)
+  println(maxFlow.calculateMaxFlow(1, N))
 }
