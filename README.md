@@ -43,6 +43,7 @@
 | [A73](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bu) | ダイクストラ法, わずかなボーナス | [ruby](ruby/A73.rb) | | |
 | [A74](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bv) | 分解して考える | [ruby](ruby/A74.rb) | | |
 | [A75](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bw) | 貪欲法, 動的計画法 | [ruby](ruby/A75.rb) | | |
+| [A77](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bw) | 貪欲法, 二分探索法 | [ruby](ruby/A77.rb) | | |
 
 ## ライブラリ
 
