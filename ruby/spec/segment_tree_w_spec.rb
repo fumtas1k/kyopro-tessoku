@@ -1,10 +1,10 @@
-require_relative "../lib/segment_tree"
+require_relative "../lib/segment_tree_w"
 
 # セグメント木のテスト
-RSpec.describe SegmentTree do
+RSpec.describe SegmentTreeW do
   describe "加算" do
     let(:arr) { [3, 7, 5, 2, 1, 4, 10, 8, 9, 6] }
-    let(:segment_tree) { SegmentTree.new(arr, 0){|a, b| [a, b].sum} }
+    let(:segment_tree) { SegmentTreeW.new(arr, 0){|a, b| [a, b].sum} }
 
     context "要素数が10個の配列の場合" do
       it "葉の数は16" do
@@ -30,7 +30,7 @@ RSpec.describe SegmentTree do
 
   describe "最大値" do
     let(:arr) { [3, 7, 5, 2, 1, 4, 10, 8, 9, 6] }
-    let(:segment_tree) { SegmentTree.new(arr, 1){|a, b| [a, b].max} }
+    let(:segment_tree) { SegmentTreeW.new(arr, 1){|a, b| [a, b].max} }
 
     context "queryで範囲を指定した場合" do
       it "その範囲の最大値が得られる" do

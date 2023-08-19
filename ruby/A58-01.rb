@@ -1,4 +1,6 @@
-# セグメント木
+# A58
+# セグメント木(RMQ)
+# 実行時間: 3s以内
 
 class SegmentTree
   # leaf_size: 葉の数
@@ -23,11 +25,11 @@ class SegmentTree
   # pos arrのindex + 1
   # x 更新する値
   def update(pos, x)
-    u = pos + leaf_size - 1
-    tree[u] = x
-    while u > 1
-      u /= 2
-      tree[u] = operator.call(tree[u * 2], tree[u * 2 + 1])
+    idx = pos + leaf_size - 1
+    tree[idx] = x
+    while idx > 1
+      idx /= 2
+      tree[idx] = operator.call(tree[idx * 2], tree[idx * 2 + 1])
     end
   end
 
@@ -35,12 +37,26 @@ class SegmentTree
   # [l, r)　求めたい半開区間
   # [a, b) 現在の半開区間
   # u 現在のtreeのインデックス
-  def query(l, r, a = 1, b = leaf_size + 1, u = 1)
+  def query(l, r, a = 1, b = leaf_size + 1, idx = 1)
     return id_elm if r <= a || b <= l
-    return tree[u] if l <= a && b <= r
+    return tree[idx] if l <= a && b <= r
     mid = (a + b) / 2
-    left = query(l, r, a, mid, u * 2)
-    right = query(l, r, mid, b, u * 2 + 1)
+    left = query(l, r, a, mid, idx * 2)
+    right = query(l, r, mid, b, idx * 2 + 1)
     operator.call(left, right)
+  end
+end
+
+N, Q = gets.split.map(&:to_i)
+QUERY = Array.new(Q) { gets.split.map(&:to_i) }
+
+seg_tree = SegmentTree.new([0] * N, -1) {|i, j| [i, j].max }
+
+QUERY.each do |query|
+  case query[0]
+  when 1
+    seg_tree.update(*query[1, 2])
+  when 2
+    puts seg_tree.query(*query[1, 2])
   end
 end
