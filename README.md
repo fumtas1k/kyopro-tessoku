@@ -7,12 +7,15 @@
 | [A08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h) | 二次元累積和 | [ruby](ruby/A08.rb) | | |
 | [A09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_i) | 二次元いもす法 | [ruby](ruby/A09.rb) | | |
 | [A10](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_j) | 累積和 | [ruby](ruby/A10.rb) | | |
+| [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法 | [ruby](ruby/A11.rb) | | |
+| [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法 | [ruby](ruby/A12.rb) | | |
 | [A13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m) | しゃくとり法 | [ruby](ruby/A13.rb) | | |
 | [A16](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p) | 動的計画法 | [ruby](ruby/A16.rb) | | |
 | [A17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_q) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
 | [A20](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_t) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
 | [A21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_u) | 動的計画法, 区間DP | [ruby](ruby/A21.rb) | | |
 | [A23](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_w) | 動的計画法, bitDP | [ruby](ruby/A23.rb) | | |
+| [B23](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cv) | 動的計画法, bitDP | [ruby](ruby/B23.rb) | | |
 | [A24](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_x) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/A24.rb) | | |
 | [A25](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_y) | 動的計画法, Number of Routes | [ruby](ruby/A25.rb) | | |
 | [A26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_z) | 素数判定 | [ruby1](ruby/A26-01.rb), [ruby2](ruby/A26-02.rb) | | |
