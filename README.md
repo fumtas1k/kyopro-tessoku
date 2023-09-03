@@ -4,6 +4,8 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin |
 | - | - | - | - | - |
+| [A08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h) | 二次元累積和 | [ruby](ruby/A08.rb) | | |
+| [A09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_i) | 二次元いもす法 | [ruby](ruby/A09.rb) | | |
 | [A13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m) | しゃくとり法 | [ruby](ruby/A13.rb) | | |
 | [A16](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p) | 動的計画法 | [ruby](ruby/A16.rb) | | |
 | [A17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_q) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
