@@ -39,6 +39,7 @@
 | [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby1](ruby/A58-01.rb), [ruby2](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) |
 | [A59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bg) | セグメント木(RSQ) | [ruby1](ruby/A59-01.rb), [ruby2](ruby/A59-02.rb) | | |
 | [A62](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_am) | 深さ優先探索(DFS) | [ruby](ruby/A62.rb) | | |
+| [B62](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ei) | 深さ優先探索(DFS) | [ruby](ruby/B62.rb) | | |
 | [A63](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_an) | 幅優先探索(BFS) | [ruby](ruby/A63.rb) | | |
 | [A64](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bl) | ダイクストラ法 | [ruby](ruby/A64.rb) | | |
 | [A65](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bm) | 木に対する動的計画法, 深さ優先探索(DFS) | [ruby1](ruby/A65-01.rb), [ruby2](ruby/A65-02.rb) | | |
