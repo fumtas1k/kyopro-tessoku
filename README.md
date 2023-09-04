@@ -10,6 +10,7 @@
 | [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法 | [ruby](ruby/A11.rb) | | |
 | [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法 | [ruby](ruby/A12.rb) | | |
 | [A13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m) | しゃくとり法 | [ruby](ruby/A13.rb) | | |
+| [B13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cl) | しゃくとり法 | [ruby](ruby/B13.rb) | | |
 | [A16](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p) | 動的計画法 | [ruby](ruby/A16.rb) | | |
 | [A17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_q) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
 | [A20](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_t) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
