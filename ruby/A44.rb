@@ -4,20 +4,19 @@
 
 N, Q = gets.split.map(&:to_i)
 QUERY = Array.new(Q) { gets.split.map(&:to_i) }
-
 A = [*0 .. N]
-is_reverse = false
+rev = false
 QUERY.each do |q|
-  case q[0]
-  when 1
-    if is_reverse
-      A[N - q[1] + 1] = q[2]
+  case q
+  in [1, x, y]
+    if rev
+      A[N - x + 1] = y
     else
-      A[q[1]] = q[2]
+      A[x] = y
     end
-  when 2
-    is_reverse = !is_reverse
-  when 3
-    puts is_reverse ? A[N - q[1] + 1] : A[q[1]]
+  in [2]
+    rev = !rev
+  in [3, x]
+    puts rev ? A[N - x + 1] : A[x]
   end
 end
