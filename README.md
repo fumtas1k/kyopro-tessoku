@@ -21,6 +21,7 @@
 | [B24](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cw) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/B24.rb) | | |
 | [A25](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_y) | 動的計画法, Number of Routes | [ruby](ruby/A25.rb) | | |
 | [A26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_z) | 素数判定 | [ruby1](ruby/A26-01.rb), [ruby2](ruby/A26-02.rb) | | |
+| [B26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cy) | 素数判定 | [ruby](ruby/B26.rb) | | |
 | [A29](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_aq) | 累乗 | [ruby](ruby/A29.rb) | | |
 | [A30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ad) | フェルマーの小定理 | [ruby](ruby/A30.rb) | | |
 | [A33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ag) | ニム | [ruby](ruby/A33.rb) | | |
