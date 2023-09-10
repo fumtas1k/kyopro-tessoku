@@ -18,6 +18,8 @@
 | [B16](https://atcoder.jp/contests/tessoku-book/tasks/dp_a) | 動的計画法 | [ruby](ruby/B16.rb) | | |
 | [A17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_q) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
 | [B17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cp) | 動的計画法, DP復元 | [ruby](ruby/B17.rb) | | |
+| [B18](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_r) | 動的計画法, 部分和問題 | [ruby](ruby/A18.rb) | | |
+| [B18](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cq) | 動的計画法, DP復元, 部分和問題 | [ruby](ruby/B18.rb) | | |
 | [A20](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_t) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
 | [A21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_u) | 動的計画法, 区間DP | [ruby](ruby/A21.rb) | | |
 | [B21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ct) | 動的計画法, 区間DP | [ruby](ruby/B21.rb) | | |
