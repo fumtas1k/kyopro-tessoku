@@ -12,10 +12,12 @@
 | [A13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m) | しゃくとり法 | [ruby](ruby/A13.rb) | | |
 | [B13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cl) | しゃくとり法 | [ruby](ruby/B13.rb) | | |
 | [A14](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_n) | 二分探索法, 半分全列挙 | [ruby](ruby/A14.rb) | | |
-| [B14](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cm) | 二分探索法, 半分全列挙, BIT全探索 | [ruby](ruby/B14-1.rb) | | |
-| [B14](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cm) | 深さ優先探索 | [ruby](ruby/B14-2.rb) | | |
+| [B14](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cm) | 二分探索法, 半分全列挙, BIT全探索, 深さ優先探索 | [ruby1](ruby/B14-1.rb), [ruby2](ruby/B14-2.rb) | | |
+| [A15](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_o) | 座標圧縮 | [ruby](ruby/A15.rb) | | |
 | [A16](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_p) | 動的計画法 | [ruby](ruby/A16.rb) | | |
+| [B16](https://atcoder.jp/contests/tessoku-book/tasks/dp_a) | 動的計画法 | [ruby](ruby/B16.rb) | | |
 | [A17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_q) | 動的計画法, DP復元 | [ruby](ruby/A17.rb) | | |
+| [B17](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cp) | 動的計画法, DP復元 | [ruby](ruby/B17.rb) | | |
 | [A20](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_t) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | |
 | [A21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_u) | 動的計画法, 区間DP | [ruby](ruby/A21.rb) | | |
 | [B21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ct) | 動的計画法, 区間DP | [ruby](ruby/B21.rb) | | |
