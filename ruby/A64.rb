@@ -4,7 +4,7 @@
 # 3s以内
 
 def dijukstra(start, n, graph)
-  dist = [Float::INFINITY] * (n + 1)
+  dist = [Float::INFINITY] * n
   dist[start] = 0
   log = [[start, 0]]
 
@@ -21,15 +21,15 @@ def dijukstra(start, n, graph)
       log.insert(idx, [to, cost])
     end
   end
-  dist[1..]
+  dist
 end
 
 N, M = gets.split.map(&:to_i)
-G = Array.new(N + 1) { [] }
+G = Array.new(N) { [] }
 M.times do
   a, b, c = gets.split.map(&:to_i)
-  G[a] << [b, c]
-  G[b] << [a, c]
+  G[a - 1] << [b - 1, c]
+  G[b - 1] << [a - 1, c]
 end
 
-puts dijukstra(1, N, G).map { _1 == Float::INFINITY ? -1 : _1 }
+puts dijukstra(0, N, G).map { _1 == Float::INFINITY ? -1 : _1 }
