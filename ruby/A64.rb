@@ -1,25 +1,24 @@
 # A64
 # ダイクストラ法
+# 二分探索法
+# 3s以内
 
 def dijukstra(start, n, graph)
   dist = [Float::INFINITY] * (n + 1)
   dist[start] = 0
+  log = [[start, 0]]
 
-  que = [start]
-  fixed = [false] * (n + 1)
-
-  until que.empty?
-    pos = que.shift
-    next if fixed[pos]
-    fixed[pos] = true
+  until log.empty?
+    pos, d = log.shift
+    next if dist[pos] < d
 
     G[pos].each do |to, c|
       cost = dist[pos] + c
       next if dist[to] <= cost
       dist[to] = cost
-      # 本来はpriority queueを用いるのだが、rubyにはないため2分探索と配列の組み合わせ
-      idx = que.bsearch_index { dist[_1] >= cost} || que.size
-      que.insert(idx, to)
+      # 本来はpriority logueを用いるのだが、rubyにはないため2分探索と配列の組み合わせ
+      idx = log.bsearch_index { dist[_1[0]] > cost } || log.size
+      log.insert(idx, [to, cost])
     end
   end
   dist[1..]
@@ -33,4 +32,4 @@ M.times do
   G[b] << [a, c]
 end
 
-puts dijukstra(1, N, G)
+puts dijukstra(1, N, G).map { _1 == Float::INFINITY ? -1 : _1 }
