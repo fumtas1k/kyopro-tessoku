@@ -6,6 +6,7 @@
 | - | - | - | - | - |
 | [A08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h) | 二次元累積和 | [ruby](ruby/A08.rb) | | |
 | [A09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_i) | 二次元いもす法 | [ruby](ruby/A09.rb) | | |
+| [B09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ch) | 二次元いもす法 | [ruby](ruby/B09.rb) | | |
 | [A10](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_j) | 累積和 | [ruby](ruby/A10.rb) | | |
 | [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法 | [ruby](ruby/A11.rb) | | |
 | [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法 | [ruby](ruby/A12.rb) | | |
