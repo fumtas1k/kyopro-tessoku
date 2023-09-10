@@ -10,25 +10,25 @@ C = gets.split.map(&:to_i)
 D = gets.split.map(&:to_i)
 
 # AとBの組み合わせ全列挙
-x = []
+P = []
 A.each do |a|
   B.each do |b|
-    x << a + b
+    P << a + b
   end
 end
-x = x.uniq.sort
+P.sort!.uniq!
 
 # CとDの組み合わせ全列挙
-y = []
+Q = []
 C.each do |c|
   D.each do |d|
-    y << c + d
+    Q << c + d
   end
 end
-y = y.uniq.sort
+Q.sort!.uniq!
 
-x.each do |i|
-  next unless y.bsearch { K - (i + _1) }
+P.each do |i|
+  next unless Q.bsearch { K - (i + _1) }
   puts "Yes"
   exit
 end
