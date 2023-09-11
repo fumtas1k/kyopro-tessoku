@@ -37,8 +37,10 @@
 | [A29](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_aq) | 累乗 | [ruby](ruby/A29.rb) | | |
 | [A30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ad) | フェルマーの小定理 | [ruby](ruby/A30.rb) | | |
 | [A33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ag) | ニム | [ruby](ruby/A33.rb) | | |
+| [A37](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ak) | 足される回数 | [ruby](ruby/A37.rb) | | |
 | [A38](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_al) | 上限値 | [ruby](ruby/A38.rb) | | |
 | [A39](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_bn) | 貪欲法 | [ruby](ruby/A39.rb) | | |
+| [B39](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_dl) | 貪欲法, 優先度付キュー | [ruby1](ruby/B39-1.rb), [ruby2](ruby/B39-2.rb) | | |
 | [A40](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_an) | 個数を考える | [ruby](ruby/A40.rb) | | |
 | [A41](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ao) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A42](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ap) | 固定(下限値)した全探索 | [ruby](ruby/A42.rb) | | |
@@ -50,6 +52,7 @@
 | [A47](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_at) | Heuristic, 局所探索法 | [ruby](ruby/A47.rb) | | |
 | [A48](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_at) | Heuristic, 焼きなまし法 | [ruby](ruby/A48.rb) | | |
 | [A49](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_aw) | Heuristic, ビームサーチ | [ruby](ruby/A49.rb) | | |
+| [B51](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dx) | スタック | [ruby](ruby/B51.rb) | | |
 | [A56](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bd) | ハッシュ | [ruby](ruby/A56.rb) | | |
 | [A57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_be) | ダブリング | [ruby](ruby/A57.rb) | | |
 | [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby1](ruby/A58-01.rb), [ruby2](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) |
