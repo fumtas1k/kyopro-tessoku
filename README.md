@@ -42,6 +42,7 @@
 | [A39](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_bn) | 貪欲法 | [ruby](ruby/A39.rb) | | |
 | [B39](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_dl) | 貪欲法, 優先度付キュー | [ruby1](ruby/B39-1.rb), [ruby2](ruby/B39-2.rb) | | |
 | [A40](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_an) | 個数を考える | [ruby](ruby/A40.rb) | | |
+| [B40](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dm) | 個数を考える | [ruby](ruby/B40.rb) | | |
 | [A41](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ao) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [A42](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ap) | 固定(下限値)した全探索 | [ruby](ruby/A42.rb) | | |
 | [A43](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_aq) | 問題を言い換える | [ruby](ruby/A43.rb) | | |
