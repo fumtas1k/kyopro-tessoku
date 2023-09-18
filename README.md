@@ -34,7 +34,10 @@
 | [A25](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_y) | 動的計画法, Number of Routes | [ruby](ruby/A25.rb) | | |
 | [A26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_z) | 素数判定 | [ruby1](ruby/A26-01.rb), [ruby2](ruby/A26-02.rb) | | |
 | [B26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cy) | 素数判定 | [ruby](ruby/B26.rb) | | |
-| [A29](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_aq) | 累乗 | [ruby](ruby/A29.rb) | | |
+| [B27](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cz) | 最小公倍数 | [ruby](ruby/B27.rb) | | |
+| [B28](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ap) | フィボナッチ数列 | [ruby](ruby/B28.rb) | | |
+| [A29](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_aq) | 冪乗 | [ruby](ruby/A29.rb) | | |
+| [B29](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_db) | 冪乗 | [ruby](ruby/B29.rb) | | |
 | [A30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ad) | フェルマーの小定理 | [ruby](ruby/A30.rb) | | |
 | [A33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ag) | ニム | [ruby](ruby/A33.rb) | | |
 | [A37](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ak) | 足される回数 | [ruby](ruby/A37.rb) | | |
