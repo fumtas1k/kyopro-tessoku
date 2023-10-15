@@ -49,6 +49,7 @@
 | [A41](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ao) | 後ろから考える | [ruby](ruby/A41.rb) | | |
 | [B41](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dn) | 後ろから考える | [ruby](ruby/B41.rb) | | |
 | [A42](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ap) | 固定(下限値)した全探索 | [ruby](ruby/A42.rb) | | |
+| [B42](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_do) | 固定(下限値)した全探索 | [ruby](ruby/B42.rb) | | |
 | [A43](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_aq) | 問題を言い換える | [ruby](ruby/A43.rb) | | |
 | [A44](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ar) | データの持ち方を工夫する | [ruby](ruby/A44.rb) | | |
 | [A45](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_as) | 不変量に着目する | [ruby](ruby/A45.rb) | | |
