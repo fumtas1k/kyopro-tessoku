@@ -39,6 +39,7 @@
 | [A29](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_aq) | 冪乗 | [ruby](ruby/A29.rb) | | |
 | [B29](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_db) | 冪乗 | [ruby](ruby/B29.rb) | | |
 | [A30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ad) | フェルマーの小定理 | [ruby](ruby/A30.rb) | | |
+| [B30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dc) | フェルマーの小定理 | [ruby](ruby/B30.rb) | | |
 | [A33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ag) | ニム | [ruby](ruby/A33.rb) | | |
 | [A37](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ak) | 足される回数 | [ruby](ruby/A37.rb) | | |
 | [A38](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_al) | 上限値 | [ruby](ruby/A38.rb) | | |
