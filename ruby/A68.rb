@@ -4,31 +4,41 @@
 # 実行時間: 1s以内
 
 class MaxFlow
-
-  attr_accessor :size, :used, :graph
-
   Edge = Struct.new(:to, :to_idx, :cap)
+  private attr_accessor :graph, :used
 
   def initialize(size)
-    @size = size + 1
-    @used = [false] * @size
-    @graph = Array.new(@size) { [] }
+    @graph = Array.new(size) { [] }
+    @used = [false] * size
   end
 
   # 頂点from -> 頂点to, 上限cap の辺追加
   def add_edge(from, to, cap)
-    graph_from_size = graph[from].size
-    graph_to_size = graph[to].size
-    graph[from] << Edge.new(to, graph_to_size, cap)
-    graph[to] << Edge.new(from, graph_from_size, 0)
+    from_size = graph[from].size
+    to_size = graph[to].size
+    graph[from] << Edge.new(to, to_size, cap)
+    graph[to] << Edge.new(from, from_size, 0)
   end
 
-  def dfs(pos, goal, min_flow)
-    return min_flow if pos == goal
+  # 最大流量を計算する
+  def calc_max_flow(start, goal)
+    total_flow = 0
+    loop do
+      used.fill(false)
+      flow = dfs(start, goal)
+      return total_flow if flow.zero?
+      total_flow += flow
+    end
+  end
+
+  private
+  # goalに辿り着ける流量を1つ求める
+  def dfs(pos, goal, max_flow = Float::INFINITY)
+    return max_flow if pos == goal
     used[pos] = true
     graph[pos].each do |edge|
-      next if edge.cap.zero? || used[edge.to]
-      flow = dfs(edge.to, goal, [min_flow, edge.cap].min)
+      next if used[edge.to] || edge.cap.zero?
+      flow = dfs(edge.to, goal, [max_flow, edge.cap].min)
       next if flow.zero?
       edge.cap -= flow
       graph[edge.to][edge.to_idx].cap += flow
@@ -36,25 +46,12 @@ class MaxFlow
     end
     0
   end
-
-  def max_flow(u, v)
-    total_flow = 0
-    while true
-      @used = [false] * size
-      flow = dfs(u, v, Float::INFINITY)
-      break if flow.zero?
-      total_flow += flow
-    end
-    total_flow
-  end
 end
 
 N, M = gets.split.map(&:to_i)
-ABC = Array.new(M) { gets.split.map(&:to_i) }
-
 mf = MaxFlow.new(N)
-ABC.each do |abc|
+M.times do
+  abc = gets.split.map(&:to_i).then { [_1[0].pred, _1[1].pred, _1[2]] }
   mf.add_edge(*abc)
 end
-
-puts mf.max_flow(1, N)
+puts mf.calc_max_flow(0, N - 1)
