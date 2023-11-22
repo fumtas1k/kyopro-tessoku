@@ -4,68 +4,71 @@
 
 class SegmentTree
   # leaf_size: 葉の数
-  # operator: 演算メソッド(合計, 最大値, 最小値などの計算)
+  # ope: 演算メソッド(合計, 最大値, 最小値などの計算)
   # id_elm: 単位元(演算メソッドで結果がもう一方の値と同じとなる要素。足し算なら0、掛け算なら1。)
   # tree: 全体の配列(インデックス0は使用しない)
-  attr_accessor :leaf_size, :operator, :id_elm, :tree
+  attr_accessor :tree, :leaf_size, :id_elm, :ope
 
-  def initialize(arr, id_elm, &method)
-    n = arr.size
-    @operator = method
+  def initialize(arr, id_elm, &block)
+    @leaf_size = (1 << (arr.size - 1)).bit_length
     @id_elm = id_elm
-    @leaf_size = 1 << (n - 1).bit_length
-    @tree = [id_elm] * 2 * leaf_size
-    n.times { tree[leaf_size + _1] = arr[_1] }
+    @ope = block
+    @tree = Array.new(2 * leaf_size) { id_elm }
+    arr.each.with_index(leaf_size) {|a, i| tree[i] = a }
     (leaf_size - 1).downto(1) do |i|
-      tree[i] = operator.call(tree[i * 2], tree[i * 2 + 1])
+      tree[i] = ope.call(tree[2 * i], tree[2 * i + 1])
     end
   end
 
   # 更新
-  # pos arrのindex + 1
-  # x 更新する値
-  def update(pos, x)
-    idx = pos + leaf_size - 1
-    tree[idx] = x
+  # pos arrの0_index
+  # value 更新する値
+  def update(pos, value)
+    idx = leaf_size + pos
+    tree[idx] = value
     while idx > 1
       idx /= 2
-      tree[idx] = operator.call(tree[idx * 2], tree[idx * 2 + 1])
+      tree[idx] = ope.call(tree[2 * idx], tree[2 * idx + 1])
     end
   end
 
   # 値の取得
   # [l, r)　求めたい半開区間
+  # return 値
   def query(l, r)
-    return id_elm if l < 1 || l > r || r > leaf_size + 1
-    left = l + leaf_size - 1
-    right = r + leaf_size - 2
-    l_ans = r_ans = id_elm
-    while left <= right
-      if left[0] == 1
-        l_ans = operator.call(l_ans, tree[left])
-        left += 1
+    return id_elm if l < 0 || l > r || r > leaf_size
+    l_idx = leaf_size + l
+    r_idx = leaf_size + r - 1
+    l_result = id_elm
+    r_result = id_elm
+    while l_idx <= r_idx
+      if l_idx[0] == 1
+        l_result = ope.call(l_result, tree[l_idx])
+        l_idx += 1
       end
-      if right[0] == 0
-        r_ans = operator.call(r_ans, tree[right])
-        right -= 1
+      if r_idx[0].zero?
+        r_result = ope.call(r_result, tree[r_idx])
+        r_idx -= 1
       end
-      left >>= 1
-      right >>= 1
+      l_idx /= 2
+      r_idx /= 2
     end
-    operator.call(l_ans, r_ans)
+    ope.call(l_result, r_result)
   end
 end
 
 N, Q = gets.split.map(&:to_i)
-QUERY = Array.new(Q) { gets.split.map(&:to_i) }
+seg_tree = SegmentTree.new([0] * N, 0) {|x, y| [x, y].max }
 
-seg_tree = SegmentTree.new([0] * N, -1) {|i, j| [i, j].max }
-
-QUERY.each do |query|
-  case query[0]
-  when 1
-    seg_tree.update(*query[1, 2])
-  when 2
-    puts seg_tree.query(*query[1, 2])
+ans = []
+Q.times do
+  query = gets.split.map(&:to_i)
+  case query
+  in [1, pos, x]
+    seg_tree.update(pos - 1, x)
+  in [2, l, r]
+    ans << seg_tree.query(l - 1, r - 1)
   end
 end
+
+puts ans
