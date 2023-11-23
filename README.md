@@ -62,6 +62,7 @@
 | [B51](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dx) | スタック | [ruby](ruby/B51.rb) | | |
 | [A56](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bd) | ハッシュ | [ruby](ruby/A56.rb) | | |
 | [A57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_be) | ダブリング | [ruby](ruby/A57.rb) | | |
+| [B57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ed) | ダブリング | [ruby](ruby/B57.rb) | | |
 | [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby1](ruby/A58-01.rb), [ruby2](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) |
 | [B58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ee) | セグメント木(RMQ) | [ruby](ruby/B58.rb) | | |
 | [A59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bg) | セグメント木(RSQ) | [ruby1](ruby/A59-01.rb), [ruby2](ruby/A59-02.rb) | | |
