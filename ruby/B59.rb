@@ -1,13 +1,13 @@
-# B58
-# セグメント木(RMQ)
+# B59
+# セグメント木(RSQ)
 # 実行時間: 2.5s以内
 
 class SegmentTree
-  attr_accessor :leaf_size, :size, :tree, :id_elm, :ope
+  private attr_accessor :leaf_size, :tree, :id_elm, :ope
 
   def initialize(arr, id_elm, &block)
-    @size = arr.size
-    @leaf_size = (1 << (size - 1)).bit_length
+    n = arr.size
+    @leaf_size = (1 << (n - 1)).bit_length
     @id_elm = id_elm
     @ope = block
     @tree = Array.new(2 * leaf_size) { @id_elm }
@@ -25,6 +25,7 @@ class SegmentTree
   end
 
   def query(l, r)
+    return id_elm if l < 0 || r > N || l >= r
     l_idx = leaf_size + l
     r_idx = leaf_size + r - 1
     l_result = id_elm
@@ -44,22 +45,19 @@ class SegmentTree
     ope.call(l_result, r_result)
   end
 
-  def last
-    tree[leaf_size + size - 1]
+  def [](pos)
+    tree[leaf_size + pos]
   end
 end
 
-N, L, R = gets.split.map(&:to_i)
-X = gets.split.map(&:to_i)
-arr = [Float::INFINITY] * N
-arr[0] = 0
-seg_tree = SegmentTree.new(arr, Float::INFINITY) {|x, y| [x, y].min }
+N = gets.to_i
+A = gets.split.map(&:to_i).map(&:pred)
+seg_tree = SegmentTree.new([0] * N, 0) {|x, y| x + y }
 
-X[1..].each.with_index(1) do |x, i|
-  l = X.bsearch_index { _1 >= [x - R, 0].max }
-  r = X.bsearch_index { _1 > [x - L, 0].max } || N
-  min = seg_tree.query(l, r)
-  seg_tree.update(i, min + 1)
+ans = []
+(N - 1).downto(0) do |i|
+  ans[i] = seg_tree.query(0, A[i])
+  seg_tree.update(A[i], seg_tree[A[i]] + 1)
 end
 
-puts seg_tree.last
+puts ans.sum
