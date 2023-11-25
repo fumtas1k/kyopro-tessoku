@@ -10,7 +10,7 @@ class SegmentTree
   attr_accessor :tree, :leaf_size, :id_elm, :ope
 
   def initialize(arr, id_elm, &block)
-    @leaf_size = (1 << (arr.size - 1)).bit_length
+    @leaf_size = 1 << (arr.size - 1).bit_length
     @id_elm = id_elm
     @ope = block
     @tree = Array.new(2 * leaf_size) { id_elm }

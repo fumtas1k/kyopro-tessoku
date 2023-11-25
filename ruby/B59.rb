@@ -7,7 +7,7 @@ class SegmentTree
 
   def initialize(arr, id_elm, &block)
     n = arr.size
-    @leaf_size = (1 << (n - 1)).bit_length
+    @leaf_size = 1 << (n - 1).bit_length
     @id_elm = id_elm
     @ope = block
     @tree = Array.new(2 * leaf_size) { @id_elm }
