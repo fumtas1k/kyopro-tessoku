@@ -7,6 +7,10 @@ def calc_dist(u, v)
   Math.sqrt(u.zip(v).sum { (_1[0] - _1[1]) ** 2 })
 end
 
+def calc_total_dist(order, dists)
+  (order.size - 1).times.sum { dists[order[_1]][order[_1 + 1]] }
+end
+
 def nearest(u, dists, visited)
   visited.size.times.filter { !visited[_1] }.min_by { dists[u][_1] }
 end
