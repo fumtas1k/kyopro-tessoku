@@ -5,7 +5,7 @@
 
 N, L = gets.split.map(&:to_i)
 K = gets.to_i
-A = [*gets.split.map(&:to_i), L]
+A = gets.split.map(&:to_i)
 
 def cuttable?(min_size)
   cutlines = [0]
