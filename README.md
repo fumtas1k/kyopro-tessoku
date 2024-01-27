@@ -88,6 +88,7 @@
 | [C02](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ez) |  | [ruby](ruby/C02.rb) | | |
 | [C03](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fa) |  | [ruby](ruby/C03.rb) | 累積和 | |
 | [C04](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fa) |  | [ruby](ruby/C04.rb) | | |
+| [C05](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fa) |  | [ruby](ruby/C05.rb) | 進数 | |
 
 ## ライブラリ
 
