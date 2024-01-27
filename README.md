@@ -84,6 +84,10 @@
 | [A74](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bv) | 分解して考える | [ruby](ruby/A74.rb) | | |
 | [A75](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bw) | 貪欲法, 動的計画法 | [ruby](ruby/A75.rb) | | |
 | [A77](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bw) | 貪欲法, 二分探索法 | [ruby](ruby/A77.rb) | | |
+| [C01](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ey) |  | [ruby](ruby/C01.rb) | | |
+| [C02](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ez) |  | [ruby](ruby/C02.rb) | | |
+| [C03](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fa) |  | [ruby](ruby/C03.rb) | 累積和 | |
+| [C04](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fa) |  | [ruby](ruby/C04.rb) | | |
 
 ## ライブラリ
 
