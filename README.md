@@ -94,6 +94,7 @@
 | [C08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ff) |  | [ruby](ruby/C08.rb) | 全探索 | |
 | [C09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fg) |  | [ruby](ruby/C09.rb) | 動的計画法 | |
 | [C12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fj) |  | [ruby](ruby/C12.rb) | 動的計画法 | |
+| [C13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fk) |  | [ruby](ruby/C13.rb) | 動的計画法 | |
 
 ## ライブラリ
 
