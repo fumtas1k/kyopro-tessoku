@@ -1,4 +1,4 @@
-# C11
+# C12
 # 動的計画法
 
 N, M, K = gets.split.map(&:to_i)
