@@ -93,6 +93,8 @@
 | [C07](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fe) | 累積和 | [ruby](ruby/C07.rb) | | |
 | [C08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ff) | 全探索 | [ruby](ruby/C08.rb) | | |
 | [C09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fg) | 動的計画法 | [ruby](ruby/C09.rb) | | |
+| [C10](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fh) | | [ruby](ruby/C10.rb) | | |
+| [C11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fi) | | [ruby](ruby/C11.rb) | | |
 | [C12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fj) | 動的計画法 | [ruby](ruby/C12.rb) | | |
 | [C13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fk) | 動的計画法 | [ruby](ruby/C13.rb) | | |
 | [C14](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_fl) | ダイクストラ法 | [ruby](ruby/C14.rb) | | |
