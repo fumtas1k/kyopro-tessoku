@@ -20,6 +20,7 @@ class SegTree
 
   def set(pos, value)
     idx = leaf_size + pos
+    tree[idx] = value
     while idx > 1
       update(idx >>= 1)
     end
@@ -70,4 +71,3 @@ ans = 0
 end
 
 puts ans
-
