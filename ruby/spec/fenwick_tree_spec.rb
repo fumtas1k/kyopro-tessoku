@@ -40,15 +40,15 @@ RSpec.describe FenwickTree do
     end
   end
 
-  describe "imos法のテスト" do
+  describe "範囲加算のテスト" do
     let(:ft) { FenwickTree.new(11) }
     let(:ans) { [1, 1, 4, 3, 3, 3, 3, 5, 5, 2, 0] }
     before do
-      ft.imos(0, 3, 1)
-      ft.imos(7, 10, 2)
-      ft.imos(2, 9, 3)
+      ft.add_by_range(0, 3, 1)
+      ft.add_by_range(7, 10, 2)
+      ft.add_by_range(2, 9, 3)
     end
-    it "合計が正しいこと" do
+    it "値が正しいこと" do
       10.times do |i|
         expect(ft.sum(i + 1)).to eq ans[i]
       end
