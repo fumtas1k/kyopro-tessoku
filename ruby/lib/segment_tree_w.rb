@@ -31,7 +31,7 @@ class SegmentTreeW
   # 値の取得
   # [l, r)　求めたい半開区間
   def prod(l, r)
-    return id_elm if l < 0 || l > r || r > leaf_size + 1
+    return id_elm if l < 0 || l > r || r > leaf_size
     left = leaf_size + l
     right = leaf_size + r
     res = id_elm
