@@ -8,8 +8,10 @@
 | [A09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_i) | 二次元いもす法 | [ruby](ruby/A09.rb) | | |
 | [B09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ch) | 二次元いもす法 | [ruby](ruby/B09.rb) | | |
 | [A10](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_j) | 累積和 | [ruby](ruby/A10.rb) | | |
-| [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法 | [ruby](ruby/A11.rb) | | |
-| [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法 | [ruby](ruby/A12.rb) | | |
+| [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法(配列) | [ruby](ruby/A11.rb) | | |
+| [B11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cj) | 二分探索法(配列) | [ruby](ruby/B11.rb) | | |
+| [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法(答え) | [ruby](ruby/A12.rb) | | |
+| [B12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ck) | 二分探索法(答え) | [ruby](ruby/B12.rb) | | |
 | [A13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m) | しゃくとり法 | [ruby](ruby/A13.rb) | | |
 | [B13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cl) | しゃくとり法 | [ruby](ruby/B13.rb) | | |
 | [A14](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_n) | 二分探索法, 半分全列挙 | [ruby](ruby/A14.rb) | | |
