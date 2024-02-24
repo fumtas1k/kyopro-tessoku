@@ -47,6 +47,7 @@
 | [A33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ag) | ニム | [ruby](ruby/A33.rb) | | |
 | [B33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_df) | ニム | [ruby](ruby/B33.rb) | | |
 | [A34](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ah) | grundy数 | [ruby](ruby/A34.rb) | | |
+| [B34](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dg) | grundy数 | [ruby](ruby/B34.rb) | | |
 | [A37](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ak) | 足される回数 | [ruby](ruby/A37.rb) | | |
 | [A38](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_al) | 上限値 | [ruby](ruby/A38.rb) | | |
 | [A39](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_bn) | 貪欲法 | [ruby](ruby/A39.rb) | | |
