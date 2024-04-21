@@ -28,5 +28,5 @@ class DSU
 
   def groups = parents_or_size.size.times.group_by { root(_1) }
 
-  def roots = groups.keys
+  def roots = parents_or_size.size.times.filter { parents_or_size[_1] < 0 }
 end
