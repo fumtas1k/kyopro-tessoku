@@ -2,7 +2,7 @@ require_relative "../lib/union_find"
 
 # Union-Findのテスト
 RSpec.describe UnionFind do
-  let(:union_find) { UnionFind.new(10) }
+  let(:union_find) { UnionFind.new(11) }
 
   describe "same?のテスト" do
     context "同じ親の要素がある場合" do

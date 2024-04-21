@@ -3,8 +3,8 @@
 class UnionFind
   attr_accessor :parents
 
-  def initialize(size)
-    @parents = Array.new(size + 1, &:itself)
+  def initialize(n)
+    @parents = Array.new(n, &:itself)
   end
 
   def root(u)
@@ -18,7 +18,5 @@ class UnionFind
     parents[rv] = ru
   end
 
-  def same?(u, v)
-    root(u) == root(v)
-  end
+  def same?(u, v) = root(u) == root(v)
 end
