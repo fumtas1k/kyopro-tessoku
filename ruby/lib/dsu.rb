@@ -4,7 +4,7 @@ class DSU
   attr_accessor :parents_or_size
 
   def initialize(n)
-    # 負の正数の場合、絶対値が連結成分数を表す
+    # 負の整数の場合、絶対値が連結成分数を表す
     @parents_or_size = Array.new(n, -1)
   end
 
