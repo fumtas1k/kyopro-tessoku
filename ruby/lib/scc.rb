@@ -60,8 +60,6 @@ class SCC
       dfs.call(i)
     end
 
-    ids.map! { group_num - _1 - 1 }
-
-    [group_num, ids]
+    [group_num, ids.map { group_num - _1 - 1 }]
   end
 end
