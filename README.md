@@ -123,3 +123,4 @@
 | 優先度付キュー | PriorityQueue | [ruby](ruby/lib/priority_queue.rb) | | |
 | 最大流量 | MaxFlow | [ruby](ruby/lib/max_flow.rb) | | [kotlin](src/main/kotlin/ktln/lib/MaxFlow.kt) |
 | フェニック木 | FenwickTree | [ruby](ruby/lib/fenwick_tree.rb) | | |
+| 強連結成分 | SCC | [ruby](ruby/lib/scc.rb) | | |
