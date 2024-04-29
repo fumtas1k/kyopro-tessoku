@@ -1,10 +1,10 @@
 package ktln.lib
 
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.jvm.isAccessible
-import kotlin.test.assertFalse
 
 /**
  * Union-Find木のテスト

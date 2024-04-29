@@ -1,10 +1,10 @@
 package ktln.lib
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import kotlin.math.max
-import kotlin.test.assertEquals
 
 /**
  * セグメント木のテスト
