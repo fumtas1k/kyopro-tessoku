@@ -17,7 +17,7 @@ class DSU
     ru, rv = root(u), root(v)
     return if ru == rv
     # サイズが大きい方が小さい方を吸収する方が速度が速い
-    ru, rv = rv, ru if - parents_or_size[ru] < - parents_or_size[rv]
+    ru, rv = rv, ru if size(ru) < size(rv)
     parents_or_size[ru] += parents_or_size[rv]
     parents_or_size[rv] = ru
   end
