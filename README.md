@@ -122,5 +122,5 @@
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | |
 | 優先度付キュー | PriorityQueue | [ruby](ruby/lib/priority_queue.rb) | | |
 | 最大流量 | MaxFlow | [ruby](ruby/lib/max_flow.rb) | | [kotlin](src/main/kotlin/ktln/lib/MaxFlow.kt) |
-| フェニック木 | FenwickTree | [ruby](ruby/lib/fenwick_tree.rb) | | |
+| フェニック木 | FenwickTree | [ruby](ruby/lib/fenwick_tree.rb) | | [kotlin](src/main/kotlin/ktln/lib/FenwickTree.kt) |
 | 強連結成分 | SCC | [ruby](ruby/lib/scc.rb) | | |
