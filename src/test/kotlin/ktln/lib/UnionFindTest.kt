@@ -10,7 +10,7 @@ import kotlin.test.assertFalse
  * Union-Find木のテスト
  *
  */
-internal class UnionFindTest {
+class UnionFindTest {
 
   private lateinit var unionFind: UnionFind
 
