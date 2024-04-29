@@ -7,18 +7,19 @@ package ktln.lib
  */
 class DSU(private val size: Int) {
 
-  private val parentsOrSize = IntArray(size + 1) { -1 }
+  // 負の整数の場合、絶対値が連結成分数を表す
+  private val parentsOrSize = IntArray(size) { -1 }
 
   /**
    * 親を取得
    * @param u 要素番号
    * @return 親番号
    */
-  private val root = DeepRecursiveFunction<Int, Int> { u ->
-    if (parentsOrSize[u] == 0) {
+  val root = DeepRecursiveFunction<Int, Int> { u ->
+    if (parentsOrSize[u] < 0) {
       u
     } else {
-      parentsOrSize[u].also { callRecursive(parentsOrSize[u]) }
+      parentsOrSize[u] = callRecursive(parentsOrSize[u])
       parentsOrSize[u]
     }
   }
@@ -55,7 +56,7 @@ class DSU(private val size: Int) {
    * @param u 要素番号
    * @return 連結成分数
    */
-  fun size(u: Int) = -root(parentsOrSize[u])
+  fun size(u: Int) = -parentsOrSize[root(u)]
 
   /**
    * グループ
