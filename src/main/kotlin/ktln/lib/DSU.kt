@@ -8,7 +8,7 @@ package ktln.lib
 class DSU(private val size: Int) {
 
   // 負の整数の場合、絶対値が連結成分数を表す
-  private val parentsOrSize = IntArray(size) { -1 }
+  private val parentOrSize = IntArray(size) { -1 }
 
   /**
    * 親を取得
@@ -16,11 +16,11 @@ class DSU(private val size: Int) {
    * @return 親番号
    */
   val root = DeepRecursiveFunction<Int, Int> { u ->
-    if (parentsOrSize[u] < 0) {
+    if (parentOrSize[u] < 0) {
       u
     } else {
-      parentsOrSize[u] = callRecursive(parentsOrSize[u])
-      parentsOrSize[u]
+      parentOrSize[u] = callRecursive(parentOrSize[u])
+      parentOrSize[u]
     }
   }
 
@@ -38,8 +38,8 @@ class DSU(private val size: Int) {
       ru = rv
       rv = temp
     }
-    parentsOrSize[ru] += parentsOrSize[rv]
-    parentsOrSize[rv] = ru
+    parentOrSize[ru] += parentOrSize[rv]
+    parentOrSize[rv] = ru
   }
 
   /**
@@ -56,14 +56,14 @@ class DSU(private val size: Int) {
    * @param u 要素番号
    * @return 連結成分数
    */
-  fun size(u: Int) = -parentsOrSize[root(u)]
+  fun size(u: Int) = -parentOrSize[root(u)]
 
   /**
    * グループ
    *
    * @return Map<ルート, グループメンバ>
    */
-  fun groups(): Map<Int, List<Int>> = parentsOrSize.mapIndexed { i, _ -> root(i) to i }
+  fun groups(): Map<Int, List<Int>> = parentOrSize.mapIndexed { i, _ -> root(i) to i }
     .groupBy { it.first }
     .mapValues { (_, list) -> list.map { it.second } }
 
@@ -72,5 +72,5 @@ class DSU(private val size: Int) {
    *
    * @return ルートリスト
    */
-  fun rootList(): List<Int> = (0..size - 1).filter { parentsOrSize[it] < 0 }
+  fun rootList(): List<Int> = (0..size - 1).filter { parentOrSize[it] < 0 }
 }

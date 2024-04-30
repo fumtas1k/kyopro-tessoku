@@ -36,11 +36,11 @@ class DSUTest {
 
   @Test
   fun isSameで親が同じものを同じと判定できる() {
-    val parentsOrSizeKProperty = DSU::class.memberProperties.first { it.name == "parentsOrSize" }
-    parentsOrSizeKProperty.isAccessible = true
-    val parentsOrSize = parentsOrSizeKProperty.get(dsu) as IntArray
-    parentsOrSize[2] = 1
-    parentsOrSize[1] = -2
+    val parentOrSizeKProperty = DSU::class.memberProperties.first { it.name == "parentOrSize" }
+    parentOrSizeKProperty.isAccessible = true
+    val parentOrSize = parentOrSizeKProperty.get(dsu) as IntArray
+    parentOrSize[2] = 1
+    parentOrSize[1] = -2
     assertTrue(dsu.isSame(1, 2))
   }
 
