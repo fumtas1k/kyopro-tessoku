@@ -13,8 +13,8 @@ RSpec.describe DSU do
 
     context "連結された場合" do
       it "親が返ること" do
-        dsu.parents_or_size[7] = 0
-        dsu.parents_or_size[0] = -2
+        dsu.parent_or_size[7] = 0
+        dsu.parent_or_size[0] = -2
         expect(dsu.root(7)).to eq 0
       end
     end
@@ -23,8 +23,8 @@ RSpec.describe DSU do
   describe "same?のテスト" do
     context "同じ親の要素がある場合" do
       before do
-        dsu.parents_or_size[2] = 1
-        dsu.parents_or_size[1] = -2
+        dsu.parent_or_size[2] = 1
+        dsu.parent_or_size[1] = -2
       end
       it "same?で親が同じものを同じと判定できる" do
         expect(dsu.same?(1, 2)).to be_truthy
