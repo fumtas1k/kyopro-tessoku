@@ -12,9 +12,11 @@ RSpec.describe DSU do
     end
 
     context "連結された場合" do
-      it "親が返ること" do
+      before do
         dsu.parent_or_size[7] = 0
         dsu.parent_or_size[0] = -2
+      end
+      it "親が返ること" do
         expect(dsu.root(7)).to eq 0
       end
     end
@@ -63,27 +65,27 @@ RSpec.describe DSU do
         expect(dsu.size(10)).to eq 4
       end
     end
+  end
 
-    describe "groupsとrootsのテスト" do
-      before do
-        dsu.unite(0, 1)
-        dsu.unite(0, 2)
-        dsu.unite(0, 3)
-        dsu.unite(4, 5)
-        dsu.unite(5, 6)
-        dsu.unite(7, 8)
-        dsu.unite(7, 9)
+  describe "groupsとrootsのテスト" do
+    before do
+      dsu.unite(0, 1)
+      dsu.unite(0, 2)
+      dsu.unite(0, 3)
+      dsu.unite(4, 5)
+      dsu.unite(5, 6)
+      dsu.unite(7, 8)
+      dsu.unite(7, 9)
+    end
+    context "groups" do
+      it "戻り値が正しいこと" do
+        expect(dsu.groups).to eq [[0, [0, 1, 2, 3]], [4, [4, 5, 6]], [7, [7, 8, 9]], [10, [10]]].to_h
       end
-      context "groups" do
-        it "戻り値が正しいこと" do
-          expect(dsu.groups).to eq [[0, [0, 1, 2, 3]], [4, [4, 5, 6]], [7, [7, 8, 9]], [10, [10]]].to_h
-        end
-      end
+    end
 
-      context "roots" do
-        it "戻り値が正しいこと" do
-          expect(dsu.roots).to contain_exactly(0, 4, 7, 10)
-        end
+    context "roots" do
+      it "戻り値が正しいこと" do
+        expect(dsu.roots).to contain_exactly(0, 4, 7, 10)
       end
     end
   end
