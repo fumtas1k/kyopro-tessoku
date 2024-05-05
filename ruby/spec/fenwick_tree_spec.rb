@@ -1,3 +1,5 @@
+require "rspec-parameterized"
+
 require_relative "../lib/fenwick_tree"
 
 # FenwickTreeのテスト
@@ -29,15 +31,27 @@ RSpec.describe FenwickTree do
   end
 
   describe "合計のテスト" do
-    it "合計が正しいこと" do
-      ft_arr = FenwickTree.new([*0 ... 10])
-      expect(ft_arr.sum(10)).to eq [*0 ... 10].sum
-      expect(ft_arr.sum(5)).to eq [*0 ... 5].sum
-      expect(ft_arr.sum(5, 10)).to eq [*5 ... 10].sum
-      10.times do |i|
-        expect(ft_arr.sum(i, i + 1)).to eq i
+    let(:ft_arr) { FenwickTree.new([*0 ... 10]) }
+    context "指定" do
+      where(:l, :r, :expected) do
+        [
+          [10, nil, 45],
+          [5, nil, 10],
+          [5, 10, 35]
+        ]
+      end
+      with_them do
+        it "合計が正しいこと" do
+          expect(ft_arr.sum(l, r)).to eq expected
+        end
       end
     end
+    context "１つずつ" do
+      it "合計が正しいこと" do
+        10.times { expect(ft_arr.sum(_1, _1 + 1)).to eq _1 }
+      end
+    end
+
   end
 
   describe "範囲加算のテスト" do
