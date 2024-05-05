@@ -79,7 +79,7 @@ describe("DSU", () => {
 
     describe("groups", () => {
       it("戻り値が正しいこと", () => {
-        const expected = new Map([[0, [0, 1, 2, 3]], [4, [4, 5, 6]], [7, [7, 8]], [9, [9]]]);
+        const expected = [[0, 1, 2, 3], [4, 5, 6], [7, 8], [9]];
         expect(dsu.groups()).toEqual(expected);
       });
     });
@@ -87,6 +87,29 @@ describe("DSU", () => {
     describe("roots", () => {
       it("戻り値が正しいこと", () => {
         expect(dsu.roots()).toEqual([0, 4, 7, 9]);
+      });
+    });
+  });
+
+  describe("group_sizeのテスト", () => {
+    describe("初期値", () => {
+      it("配列数と同じであること", () => {
+        expect(dsu.group_size).toBe(10);
+      });
+    });
+
+    describe("結合した場合", () => {
+      beforeEach(() => {
+        dsu.unite(0, 1);
+        dsu.unite(0, 2);
+        dsu.unite(0, 3);
+        dsu.unite(4, 5);
+        dsu.unite(5, 6);
+        dsu.unite(7, 8);
+      });
+
+      it("戻り値が正しいこと", () => {
+        expect(dsu.group_size).toBe(4);
       });
     });
   });
