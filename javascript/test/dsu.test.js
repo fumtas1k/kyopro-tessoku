@@ -1,6 +1,8 @@
-const { before } = require("node:test");
 const DSU = require("../lib/dsu");
 
+/**
+ * DSUのテスト
+ */
 describe("DSU", () => {
   let dsu;
 
