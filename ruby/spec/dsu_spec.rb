@@ -4,10 +4,11 @@ require_relative "../lib/dsu"
 RSpec.describe DSU do
   let(:dsu) { DSU.new(10) }
 
-  describe "rootのテスト" do
+  describe "rootとleaderのテスト" do
     context "初期値" do
       it "自分自身であること" do
         expect(dsu.root(7)).to eq 7
+        expect(dsu.leader(7)).to eq 7
       end
     end
 
@@ -18,6 +19,7 @@ RSpec.describe DSU do
       end
       it "親が返ること" do
         expect(dsu.root(7)).to eq 0
+        expect(dsu.leader(7)).to eq 0
       end
     end
   end
@@ -39,6 +41,16 @@ RSpec.describe DSU do
       it "親が同じになる" do
         expect(dsu.same?(1, 9)).to be_falsy
         dsu.unite(1, 9)
+        expect(dsu.same?(1, 9)).to be_truthy
+      end
+    end
+  end
+
+  describe "mergeのテスト" do
+    context "親が違う場合にmergeを使用した場合" do
+      it "親が同じになる" do
+        expect(dsu.same?(1, 9)).to be_falsy
+        dsu.merge(1, 9)
         expect(dsu.same?(1, 9)).to be_truthy
       end
     end

@@ -6,10 +6,11 @@ describe("DSU", () => {
 
   beforeEach(() => dsu = new DSU(10));
 
-  describe("rootのテスト", () => {
+  describe("rootとleaderのテスト", () => {
     describe("初期値", () => {
       it("自分自身であること", () => {
         expect(dsu.root(7)).toBe(7);
+        expect(dsu.leader(7)).toBe(7);
       });
     });
     describe("連結された場合", () => {
@@ -19,6 +20,7 @@ describe("DSU", () => {
       });
       it("親が返ること", () => {
         expect(dsu.root(7)).toBe(0);
+        expect(dsu.leader(7)).toBe(0);
       });
     });
   });
@@ -40,6 +42,16 @@ describe("DSU", () => {
       it("親が同じになる", () => {
         expect(dsu.isSame(1, 9)).toBeFalsy();
         dsu.unite(1, 9);
+        expect(dsu.isSame(1, 9)).toBeTruthy();
+      });
+    });
+  });
+
+  describe("mergeのテスト", () => {
+    describe("親が違う場合にmergeを使用した場合", () => {
+      it("親が同じになる", () => {
+        expect(dsu.isSame(1, 9)).toBeFalsy();
+        dsu.merge(1, 9);
         expect(dsu.isSame(1, 9)).toBeTruthy();
       });
     });
