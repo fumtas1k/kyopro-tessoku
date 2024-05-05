@@ -3,12 +3,14 @@ package ktln.lib
 /**
  * DSU(Union-Find木)
  *
- * @property size 木のサイズ
+ * @property n 木のサイズ
  */
-class DSU(private val size: Int) {
+class DSU(private val n: Int) {
 
   // 負の整数の場合、絶対値が連結成分数を表す
-  private val parentOrSize = IntArray(size) { -1 }
+  private val parentOrSize = IntArray(n) { -1 }
+  var groupSize: Int = n
+    private set
 
   /**
    * 親を取得
@@ -23,6 +25,7 @@ class DSU(private val size: Int) {
       parentOrSize[u]
     }
   }
+  val leader = root
 
   /**
    * 結合
@@ -40,7 +43,10 @@ class DSU(private val size: Int) {
     }
     parentOrSize[ru] += parentOrSize[rv]
     parentOrSize[rv] = ru
+    groupSize--
   }
+
+  val merge = ::unite
 
   /**
    * 親が同じか
@@ -63,14 +69,16 @@ class DSU(private val size: Int) {
    *
    * @return Map<ルート, グループメンバ>
    */
-  fun groups(): Map<Int, List<Int>> = parentOrSize.mapIndexed { i, _ -> root(i) to i }
-    .groupBy { it.first }
-    .mapValues { (_, list) -> list.map { it.second } }
+  fun groupList(): List<List<Int>> {
+    val groups = mutableMapOf<Int, MutableList<Int>>()
+    (0 until n).forEach { groups.getOrPut(root(it)) { mutableListOf() }.add(it) }
+    return groups.values.toList()
+  }
 
   /**
    * ルートリスト
    *
    * @return ルートリスト
    */
-  fun rootList(): List<Int> = (0..size - 1).filter { parentOrSize[it] < 0 }
+  fun rootList(): List<Int> = (0 until n).filter { parentOrSize[it] < 0 }
 }

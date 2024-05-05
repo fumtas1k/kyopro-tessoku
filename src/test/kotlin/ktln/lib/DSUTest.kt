@@ -25,13 +25,28 @@ class DSUTest {
     dsu = DSU(10)
   }
 
-  @ParameterizedTest
-  @ValueSource(
-    ints =
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  )
-  fun rootの初期値は自分自身であること(u: Int) {
-    assertEquals(u, dsu.root(u))
+  @Nested
+  inner class rootのテスト {
+    @ParameterizedTest
+    @ValueSource(
+      ints =
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    )
+    fun 初期値は自分自身であること(u: Int) {
+      assertEquals(u, dsu.leader(u))
+    }
+
+    @Test
+    fun 連結された場合親が返ること() {
+      val parentOrSizeKProperty = DSU::class.memberProperties.first { it.name == "parentOrSize" }
+      parentOrSizeKProperty.isAccessible = true
+      val parentOrSize = parentOrSizeKProperty.get(dsu) as IntArray
+      parentOrSize[2] = 1
+      parentOrSize[1] = -2
+      assertEquals(1, dsu.root(2))
+      assertEquals(1, dsu.leader(2))
+    }
+
   }
 
   @Test
@@ -48,6 +63,13 @@ class DSUTest {
   fun uniteで結合すると親が同じになる() {
     assertFalse(dsu.isSame(0, 8))
     dsu.unite(0, 8)
+    assertTrue(dsu.isSame(0, 8))
+  }
+
+  @Test
+  fun mergeで結合すると親が同じになる() {
+    assertFalse(dsu.isSame(0, 8))
+    dsu.merge(0, 8)
     assertTrue(dsu.isSame(0, 8))
   }
 
@@ -90,20 +112,36 @@ class DSUTest {
     }
 
     @Test
-    fun groupsが正しいこと() {
-      val expected = mapOf(
-        0 to listOf(0, 1, 2, 3),
-        4 to listOf(4, 5, 6),
-        7 to listOf(7, 8),
-        9 to listOf(9)
+    fun groupListが正しいこと() {
+      val expected = listOf(
+        listOf(0, 1, 2, 3),
+        listOf(4, 5, 6),
+        listOf(7, 8),
+        listOf(9)
       )
-      assertEquals(expected, dsu.groups())
+      assertEquals(expected, dsu.groupList())
     }
 
     @Test
     fun rootListが正しいこと() {
       val expected = listOf(0, 4, 7, 9)
       assertEquals(expected, dsu.rootList())
+    }
+  }
+
+  @Nested
+  inner class groupSizeのテスト {
+    @Test
+    fun 初期値は配列数であること() {
+      assertEquals(10, dsu.groupSize)
+    }
+
+    @Test
+    fun rootListが正しいこと() {
+      listOf(0 to 1, 1 to 2, 3 to 0, 4 to 5, 5 to 6, 7 to 8).forEach {
+        dsu.unite(it.first, it.second)
+      }
+      assertEquals(4, dsu.groupSize)
     }
   }
 }
