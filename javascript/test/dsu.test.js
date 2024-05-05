@@ -91,10 +91,10 @@ describe("DSU", () => {
     });
   });
 
-  describe("group_sizeのテスト", () => {
+  describe("groupSizeのテスト", () => {
     describe("初期値", () => {
       it("配列数と同じであること", () => {
-        expect(dsu.group_size).toBe(10);
+        expect(dsu.groupSize).toBe(10);
       });
     });
 
@@ -109,7 +109,7 @@ describe("DSU", () => {
       });
 
       it("戻り値が正しいこと", () => {
-        expect(dsu.group_size).toBe(4);
+        expect(dsu.groupSize).toBe(4);
       });
     });
   });

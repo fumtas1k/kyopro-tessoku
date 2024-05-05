@@ -3,7 +3,7 @@
 class DSU {
   constructor(n) {
     this.n = n;
-    this.group_size = n;
+    this.groupSize = n;
     // 負の整数の場合、絶対値が連結成分数を表す
     this.parentOrSize = new Array(n).fill(-1);
   }
@@ -22,7 +22,7 @@ class DSU {
     if (this.size(ru) < this.size(rv)) [ru, rv] = [rv, ru];
     this.parentOrSize[ru] += this.parentOrSize[rv];
     this.parentOrSize[rv] = ru;
-    this.group_size--;
+    this.groupSize--;
   }
   merge = this.unite;
 
