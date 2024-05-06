@@ -120,7 +120,7 @@
 | 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | [java](src/main/java/jv/lib/UnionFind.java) | [kotlin](src/main/kotlin/ktln/lib/UnionFind.kt) | |
 | 素集合データ構造 | DSU | [ruby](ruby/lib/dsu.rb) |  | [kotlin](src/main/kotlin/ktln/lib/DSU.kt) | [javascript](javascript/lib/dsu.js) |
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | | |
-| 優先度付キュー | PriorityQueue | [ruby](ruby/lib/priority_queue.rb) | | | |
+| 優先度付キュー | PriorityQueue | [ruby](ruby/lib/priority_queue.rb) | | | [javascript](javascript/lib/priority_queue.js) |
 | 最大流量 | MaxFlow | [ruby](ruby/lib/max_flow.rb) | | [kotlin](src/main/kotlin/ktln/lib/MaxFlow.kt) | |
 | フェニック木 | FenwickTree | [ruby](ruby/lib/fenwick_tree.rb) | | [kotlin](src/main/kotlin/ktln/lib/FenwickTree.kt) | |
 | 強連結成分 | SCC | [ruby](ruby/lib/scc.rb) | | | |
