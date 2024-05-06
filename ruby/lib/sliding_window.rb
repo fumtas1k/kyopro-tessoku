@@ -20,7 +20,7 @@ class SlidingWindow
     (data.size + (match ? 0 : window_size - 1)).times do |i|
       set_window(i)
       next if match && i < window_size - 1
-      res << window[0]
+      res << data[window[0]]
     end
     res
   end
@@ -29,10 +29,10 @@ class SlidingWindow
   # 範囲設定
   # idx インデックス
   def set_window(idx)
-    window.shift if window_size <= idx && window[0] == data[idx - window_size]
+    window.shift if window_size <= idx && window[0] <= idx - window_size
     return if idx >= data.size
     # 追加する値より大きい(最小の場合)、もしくは小さい(最大の場合)値は不要のため捨てる
-    window.pop while !window.empty? && ope.call(data[idx], window[-1])
-    window << data[idx]
+    window.pop while !window.empty? && ope.call(data[idx], data[window[-1]])
+    window << idx
   end
 end
