@@ -4,21 +4,21 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin | JS |
 | - | - | - | - | - | - |
-| [A01](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a) | | | | | [ruby](javascript/A01.js) |
-| [A02](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_b) | | | | | [ruby](javascript/A02.js) |
-| [A03](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_c) | | | | | [ruby](javascript/A03.js) |
-| [A04](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_d) | 2進法 | | | | [ruby](javascript/A04.js) |
-| [A05](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_e) | | | | | [ruby](javascript/A05.js) |
-| [A06](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_f) | 累積和 | | | | [ruby](javascript/A06.js) |
-| [A07](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_g) | いもす法 | | | | [ruby](javascript/A07.js) |
+| [A01](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a) | | | | | [JS](javascript/A01.js) |
+| [A02](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_b) | | | | | [JS](javascript/A02.js) |
+| [A03](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_c) | | | | | [JS](javascript/A03.js) |
+| [A04](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_d) | 2進法 | | | | [JS](javascript/A04.js) |
+| [A05](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_e) | | | | | [JS](javascript/A05.js) |
+| [A06](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_f) | 累積和 | | | | [JS](javascript/A06.js) |
+| [A07](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_g) | いもす法 | | | | [JS](javascript/A07.js) |
 | [B07](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_al) | いもす法 | [ruby](ruby/B07.rb) | | | |
 | [A08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h) | 二次元累積和 | [ruby](ruby/A08.rb) | | | |
 | [A09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_i) | 二次元いもす法 | [ruby](ruby/A09.rb) | | | |
 | [B09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ch) | 二次元いもす法 | [ruby](ruby/B09.rb) | | | |
 | [A10](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_j) | 累積和 | [ruby](ruby/A10.rb) | | | |
-| [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法(配列) | [ruby](ruby/A11.rb) | | | |
+| [A11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_k) | 二分探索法(配列) | [ruby](ruby/A11.rb) | | | [JS](javascript/A11.js) |
 | [B11](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cj) | 二分探索法(配列) | [ruby](ruby/B11.rb) | | | |
-| [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法(答え) | [ruby](ruby/A12.rb) | | | |
+| [A12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_l) | 二分探索法(答え) | [ruby](ruby/A12.rb) | | | [JS](javascript/A12.js) |
 | [B12](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ck) | 二分探索法(答え) | [ruby](ruby/B12.rb) | | | |
 | [A13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_m) | しゃくとり法 | [ruby](ruby/A13.rb) | | | |
 | [B13](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cl) | しゃくとり法 | [ruby](ruby/B13.rb) | | | |
