@@ -54,7 +54,7 @@ class FenwickTree {
    * 2の目的: l - 1の値の取得
    */
   sum(l, r = null) {
-    return r ? this._sum(r) - this._sum(l) : this._sum(l)
+    return r ? this.#sum(r) - this.#sum(l) : this.#sum(l)
   }
 
 
@@ -62,7 +62,7 @@ class FenwickTree {
    * 合計
    * [0, r) の合計
    */
-  _sum(r) {
+  #sum(r) {
     let idx = r;
     let res = 0;
     while (idx > 0) {
