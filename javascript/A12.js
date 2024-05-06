@@ -20,6 +20,6 @@ const A = input[1].split(" ").map(Number);
 
 const copy_cnt = time => A.sum(a => Math.floor(time / a));
 
-const ans = binarySearch(-1, 10 ** 9, mid => copy_cnt(mid) >= K);
+const ans = binarySearch(0, 10 ** 9, mid => copy_cnt(mid) >= K);
 
 console.log(ans);
