@@ -2,9 +2,10 @@ require_relative "../lib/priority_queue"
 
 # 優先度付キューのテスト
 RSpec.describe PriorityQueue do
-  let(:priority_queue) { PriorityQueue.new { |x, y| x.first <= y.first } }
+  let(:priority_queue) { PriorityQueue.new { |x, y| x.first < y.first } }
   context "8個の要素をプッシュした場合" do
     before do
+      priority_queue.heap.clear
       priority_queue << [9, 2]
       priority_queue << [5, 1]
       priority_queue << [3, 3]
@@ -29,9 +30,19 @@ RSpec.describe PriorityQueue do
       expect(priority_queue.size).to eq 7
     end
 
-    it "shiftを2回行うと[2, 6]が取得できる" do
-      priority_queue.shift
-      expect(priority_queue.shift).to eq [2, 6]
+    it "shiftで得られる値が正しいこと" do
+      [
+        [1, 4],
+        [2, 6],
+        [3, 3],
+        [4, 9],
+        [5, 1],
+        [6, 5],
+        [8, 10],
+        [9, 2],
+      ].each do |expected|
+        expect(priority_queue.shift).to eq expected
+      end
     end
   end
 
@@ -49,33 +60,24 @@ RSpec.describe PriorityQueue do
       ])
     end
 
-    it "1つずつプッシュした場合と同じheapが得られる" do
-      expected = PriorityQueue.new { |x, y| x.first <= y.first }
-      expected << [9, 2]
-      expected << [5, 1]
-      expected << [3, 3]
-      expected << [6, 5]
-      expected << [8, 10]
-      expected << [1, 4]
-      expected << [4, 9]
-      expected << [2, 6]
-      expect(priority_queue.send(:heap)).to eq expected.send(:heap)
+    it "shiftで得られる値が正しいこと" do
+      [
+        [1, 4],
+        [2, 6],
+        [3, 3],
+        [4, 9],
+        [5, 1],
+        [6, 5],
+        [8, 10],
+        [9, 2],
+      ].each do |expected|
+        expect(priority_queue.shift).to eq expected
+      end
     end
   end
 
   context "配列で新規作成した場合" do
-    before do
-      priority_queue << [9, 2]
-      priority_queue << [5, 1]
-      priority_queue << [3, 3]
-      priority_queue << [6, 5]
-      priority_queue << [8, 10]
-      priority_queue << [1, 4]
-      priority_queue << [4, 9]
-      priority_queue << [2, 6]
-    end
-
-    it "1つずつプッシュした場合と同じheapが得られる" do
+    it "shiftで得られる値が正しいこと" do
       actual = PriorityQueue.new([
         [9, 2],
         [5, 1],
@@ -85,8 +87,20 @@ RSpec.describe PriorityQueue do
         [1, 4],
         [4, 9],
         [2, 6],
-      ]) { |x, y| x.first <= y.first }
-      expect(actual.send(:heap)).to eq priority_queue.send(:heap)
+      ]) { |x, y| x.first < y.first }
+
+      [
+        [1, 4],
+        [2, 6],
+        [3, 3],
+        [4, 9],
+        [5, 1],
+        [6, 5],
+        [8, 10],
+        [9, 2],
+      ].each do |expected|
+        expect(actual.shift).to eq expected
+      end
     end
   end
 
@@ -95,7 +109,7 @@ RSpec.describe PriorityQueue do
       priority_queue << [9, 2]
       priority_queue << [5, 1]
       priority_queue.shift
-      priority_queue.shift
+      priority_queue.pop
     end
     it "heapは空" do
       expect(priority_queue.empty?).to be_truthy
