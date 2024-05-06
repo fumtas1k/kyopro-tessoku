@@ -88,7 +88,7 @@
 | [B62](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ei) | 深さ優先探索(DFS) | [ruby](ruby/B62.rb) | | | |
 | [A63](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_an) | 幅優先探索(BFS) | [ruby](ruby/A63.rb) | | | |
 | [B63](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ej) | 幅優先探索(BFS) | [ruby](ruby/B63.rb) | | | |
-| [A64](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bl) | ダイクストラ法 | [ruby](ruby/A64.rb) | | | |
+| [A64](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bl) | ダイクストラ法 | [ruby](ruby/A64.rb) | | | [javascript](javascript/A64.js) |
 | [B64](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ek) | ダイクストラ法 | [ruby](ruby/B64.rb) | | | |
 | [A65](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bm) | 木に対する動的計画法, 深さ優先探索(DFS) | [ruby1](ruby/A65-01.rb), [ruby2](ruby/A65-02. |rb) | | |
 | [B66](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_em) | UNION FIND | [ruby](ruby/B66.rb) | | | |
