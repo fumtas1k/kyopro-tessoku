@@ -63,7 +63,7 @@ class PriorityQueue
   def shift_down(start_idx, idx)
     item = heap[idx]
     while idx > start_idx
-      parent_idx = (idx - 1) / 2
+      parent_idx = (idx - 1) >> 1
       break if ope.call(heap[parent_idx], item)
       heap[idx] = heap[parent_idx]
       idx = parent_idx
