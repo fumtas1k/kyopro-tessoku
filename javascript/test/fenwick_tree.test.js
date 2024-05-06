@@ -1,4 +1,3 @@
-const { beforeEach } = require("node:test");
 const FenwickTree = require("../lib/fenwick_tree");
 
 /**
