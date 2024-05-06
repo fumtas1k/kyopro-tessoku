@@ -4,6 +4,13 @@
 
 | 問題(例) | アルゴリズム等 | ruby | java | kotlin | JS |
 | - | - | - | - | - | - |
+| [A01](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a) | | | | | [ruby](javascript/A01.js) |
+| [A02](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_b) | | | | | [ruby](javascript/A02.js) |
+| [A03](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_c) | | | | | [ruby](javascript/A03.js) |
+| [A04](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_d) | 2進法 | | | | [ruby](javascript/A04.js) |
+| [A05](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_e) | | | | | [ruby](javascript/A05.js) |
+| [A06](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_f) | 累積和 | | | | [ruby](javascript/A06.js) |
+| [A07](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_g) | いもす法 | | | | [ruby](javascript/A07.js) |
 | [B07](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_al) | いもす法 | [ruby](ruby/B07.rb) | | | |
 | [A08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h) | 二次元累積和 | [ruby](ruby/A08.rb) | | | |
 | [A09](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_i) | 二次元いもす法 | [ruby](ruby/A09.rb) | | | |
