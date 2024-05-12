@@ -132,3 +132,4 @@
 | フェニック木 | FenwickTree | [ruby](ruby/lib/fenwick_tree.rb) | | [kotlin](src/main/kotlin/ktln/lib/FenwickTree.kt) | |
 | 強連結成分 | SCC | [ruby](ruby/lib/scc.rb) | | | |
 | スライド最大値・最小値 | SlidingWindow | [ruby](ruby/lib/sliding_window.rb) | | | |
+| トライ木 | Trie | [ruby](ruby/lib/trie.rb) | | | |
