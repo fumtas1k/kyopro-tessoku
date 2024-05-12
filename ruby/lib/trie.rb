@@ -1,22 +1,27 @@
 class Trie
-  Node = Struct.new(:child, :is_end, :count)
+  Node = Struct.new(:child, :is_end, :value, :count, keyword_init: true) {
+    def self.default
+      new(child: Hash.new, is_end: false, value: nil, count: 0)
+    end
+  }
 
   attr_reader :root
 
   def initialize
-    @root = Node.new(Hash.new, false, 0)
+    @root = Node.default
   end
 
-  def insert(word)
+  def insert(word, value = nil)
     node = root
     word.chars.each_with_index do |c, i|
       unless node.child[c]
-        node.child[c] = Node.new(Hash.new, false, 0)
+        node.child[c] = Node.default
       end
       node.count += 1
       node = node.child[c]
     end
       node.count += 1
+      node.value = value
       node.is_end = true
   end
 
@@ -42,6 +47,7 @@ class Trie
 
     unless ptr.child.empty?
       ptr.is_end = false
+      ptr.value = nil
       ptr.count -= 1
       return
     end
@@ -62,5 +68,26 @@ class Trie
       ptr = ptr.child[c]
     end
     ptr.count
+  end
+
+  def get_value(key)
+    ptr = root
+    key.chars.each do |k|
+      return unless ptr.child[k]
+      ptr = ptr.child[k]
+    end
+    ptr.value
+  end
+
+  def get_lcp(word)
+    ptr = root
+
+    word.chars.each_with_index do |k, i|
+      unless ptr.child[k]
+        return i.zero? ? nil : word[...i]
+      end
+      ptr = ptr.child[k]
+    end
+    word
   end
 end
