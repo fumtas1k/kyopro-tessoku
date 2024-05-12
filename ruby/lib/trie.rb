@@ -81,13 +81,12 @@ class Trie
 
   def get_lcp(word)
     ptr = root
-
+    res = []
     word.chars.each_with_index do |k, i|
-      unless ptr.child[k]
-        return i.zero? ? nil : word[...i]
-      end
+      break unless ptr.child[k]
+      res << k
       ptr = ptr.child[k]
     end
-    word
+    return res.join
   end
 end
