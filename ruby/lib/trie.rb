@@ -1,3 +1,5 @@
+# トライ木
+
 class Trie
   Node = Struct.new(:child, :is_end, :value, :count, keyword_init: true) {
     def self.default
@@ -112,6 +114,10 @@ class Trie
     dfs(ptr, prefix_chars)
   end
 
+  def prefix_comb_count
+    dfs2(root, [])
+  end
+
   private
   def to_num(chr)
     chr.ord - "a".ord
@@ -130,5 +136,16 @@ class Trie
       stack.pop
     end
     words
+  end
+
+  def dfs2(ptr, stack)
+    cnt = 0
+    cnt += (ptr.count * (ptr.count - 1)) / 2 unless ptr == root
+    26.times do |i|
+      next unless ptr.child[i]
+      cnt += dfs2(ptr.child[i], stack << to_chr(i))
+      stack.pop
+    end
+    cnt
   end
 end
