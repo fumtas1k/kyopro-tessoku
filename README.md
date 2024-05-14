@@ -133,3 +133,5 @@
 | 強連結成分 | SCC | [ruby](ruby/lib/scc.rb) | | | |
 | スライド最大値・最小値 | SlidingWindow | [ruby](ruby/lib/sliding_window.rb) | | | |
 | トライ木 | Trie | [ruby](ruby/lib/trie.rb) | | | |
+| manacher | manacher | [ruby](ruby/lib/manacher.rb) | | | |
+| Zアルゴリズム | z_algorithm | [ruby](ruby/lib/z_algorithm.rb) | | | |
