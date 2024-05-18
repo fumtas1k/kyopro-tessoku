@@ -5,25 +5,24 @@
 
 N = gets.to_i
 XY = Array.new(N) { gets.split.map(&:to_i) }
-dist = Array.new(N) { [0] * N }
-
+DIST = Array.new(N) { Array.new(N, 0) }
 N.times do |i|
-  (i + 1 .. N - 1).each do |j|
-    dist[i][j] = dist[j][i] = Math.sqrt((XY[i][0] - XY[j][0]) ** 2 + (XY[i][1] - XY[j][1]) ** 2)
+  (i + 1).upto(N - 1) do |j|
+    DIST[i][j] = DIST[j][i] = XY[i].zip(XY[j]).sum { (_1 - _2) ** 2 }.then { Math.sqrt(_1) }
   end
 end
 
-dp = Array.new(N) { Array.new(1 << N, Float::INFINITY) }
+dp = Array.new(1 << N) { Array.new(N, Float::INFINITY) }
 dp[0][0] = 0
 
-(1 << N).times do |bits|
+(1 << N).times do |bit|
   N.times do |i|
-    next if dp[i][bits] == Float::INFINITY
+    next if dp[bit][i] == Float::INFINITY
     N.times do |j|
-      next unless bits[j].zero?
-      dp[j][bits + (1 << j)] = [dp[j][bits + (1 << j)], dp[i][bits] + dist[i][j]].min
+      next if bit[j] == 1 || i == j
+      dp[bit | (1 << j)][j] = [dp[bit | (1 << j)][j], dp[bit][i] + DIST[i][j]].min
     end
   end
 end
 
-puts dp[0][(1 << N) - 1]
+puts dp[-1][0]
