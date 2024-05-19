@@ -78,7 +78,7 @@
 | [A56](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bd) | ハッシュ | [ruby](ruby/A56.rb) | | | |
 | [A57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_be) | ダブリング | [ruby](ruby/A57.rb) | | | |
 | [B57](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ed) | ダブリング | [ruby](ruby/B57.rb) | | | |
-| [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby1](ruby/A58-01.rb), [ruby2](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) | |
+| [A58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bf) | セグメント木(RMQ) | [ruby1](ruby/A58-01.rb), [ruby2](ruby/A58-02.rb) | | [kotlin](src/main/kotlin/ktln/A58.kt) | [JS](javascript/A58.js) |
 | [B58](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ee) | セグメント木(RMQ) | [ruby](ruby/B58.rb) | | | |
 | [A59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_bg) | セグメント木(RSQ) | [ruby1](ruby/A59-01.rb), [ruby2](ruby/A59-02.rb) | | | |
 | [B59](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ef) | セグメント木(RSQ) | [ruby](ruby/B59.rb) | | | |
@@ -123,7 +123,7 @@
 
 | アルゴリズム名 | クラス名 | ruby | java | kotlin | JS |
 | - | - | - | - | - | - |
-| セグメント木 | SegmentTree | [ruby再帰](ruby/lib/segment_tree_r.rb), [ruby非再帰](ruby/lib/segment_tree_w.rb) | | [kotlin再帰](src/main/kotlin/ktln/lib/SegmentTreeR.kt), [kotlin非再帰](src/main/kotlin/ktln/lib/SegmentTreeW.kt) | |
+| セグメント木 | SegmentTree | [ruby再帰](ruby/lib/segment_tree_r.rb), [ruby非再帰](ruby/lib/segment_tree_w.rb) | | [kotlin再帰](src/main/kotlin/ktln/lib/SegmentTreeR.kt), [kotlin非再帰](src/main/kotlin/ktln/lib/SegmentTreeW.kt) | [JS](javascript/lib/segment_tree.js) |
 | 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | [java](src/main/java/jv/lib/UnionFind.java) | [kotlin](src/main/kotlin/ktln/lib/UnionFind.kt) | |
 | 素集合データ構造 | DSU | [ruby](ruby/lib/dsu.rb) |  | [kotlin](src/main/kotlin/ktln/lib/DSU.kt) | [JS](javascript/lib/dsu.js) |
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | | |
