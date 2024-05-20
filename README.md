@@ -35,7 +35,7 @@
 | [B19](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cr) | 動的計画法, ナップザック問題 | [ruby](ruby/B19.rb) | | | |
 | [A20](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_t) | 動的計画法, 最長共通部分列 | [ruby](ruby/A20.rb) | | | |
 | [B20](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cs) | 動的計画法, 最長共通部分列 | [ruby](ruby/B20.rb) | | | |
-| [A21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_u) | 動的計画法, 区間DP | [ruby](ruby/A21.rb) | | | |
+| [A21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_u) | 動的計画法, 区間DP | [ruby1](ruby/A21-1.rb), [ruby2](ruby/A21-2.rb) | | | [JS](javascript/A21.js) |
 | [B21](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ct) | 動的計画法, 区間DP | [ruby](ruby/B21.rb) | | | |
 | [A23](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_w) | 動的計画法, bitDP | [ruby](ruby/A23.rb) | | | |
 | [B23](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cv) | 動的計画法, bitDP | [ruby](ruby/B23.rb) | | | |
