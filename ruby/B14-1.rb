@@ -8,25 +8,21 @@ N, K = gets.split.map(&:to_i)
 A = gets.split.map(&:to_i)
 
 def sum_pattern(arr)
-  result = []
-  (1 << arr.size).times do |bits|
-    selected_sum = 0
-    arr.size.times do |i|
-      selected_sum += arr[i] unless bits[i].zero?
-    end
-    result << selected_sum
-  end
-  result.uniq.sort
+  result = (1 << arr.size).times.map do |bit|
+    arr.filter.with_index { |_, i| bit[i].zero? }.sum
+  end.uniq.sort
 end
 
 half = N / 2
-B = sum_pattern(A[0, half])
-C = sum_pattern(A[half ... N])
 
-B.each do |b|
-  next unless C.bsearch { K - (b + _1) }
-  puts "Yes"
-  exit
+sums1 = sum_pattern(A[0, half])
+sums2 = sum_pattern(A[half, N - half])
+
+sums1.each do |sum1|
+  if sums2.bsearch { K - (sum1 + _1) }
+    puts "Yes"
+    exit
+  end
 end
 
 puts "No"
