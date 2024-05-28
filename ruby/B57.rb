@@ -4,20 +4,21 @@
 
 MAX = 30
 N, K = gets.split.map(&:to_i)
-A = (N + 1).times.map {|i| i - i.to_s.chars.sum { _1.to_i } }
+DP = Array.new(MAX) { Array.new(N + 1) }
+(N + 1).times.map { _1 - _1.digits.sum }.then { DP.unshift(_1) }
 
-dp = Array.new(MAX) { [] }
-dp[0] = A.clone
-(MAX - 1).times do |i|
+MAX.times do |i|
   (N + 1).times do |j|
-    dp[i + 1][j] = dp[i][dp[i][j]]
+    DP[i + 1][j] = DP[i][DP[i][j]]
   end
 end
 
 ans = Array.new(N + 1, &:itself)
 MAX.times do |i|
   next if K[i].zero?
-  (N + 1).times { ans[_1] = dp[i][ans[_1]] }
+  (N + 1).times do |j|
+    ans[j] = DP[i][ans[j]]
+  end
 end
 
-puts ans[1 ..]
+puts ans[1..]
