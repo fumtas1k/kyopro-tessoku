@@ -1,5 +1,5 @@
 # 強連結成分(Strongly Connected Components)
-
+# 無向グラフでは使用できない
 class SCC
   attr_reader :size, :edges
   def initialize(n)
@@ -30,7 +30,7 @@ class SCC
     ord = []
     ids = []
 
-    dfs =-> from do
+    dfs = -> from do
       low[from] = ord[from] = now_ord
       now_ord += 1
       visited << from
