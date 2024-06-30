@@ -26,6 +26,18 @@ RSpec.describe SegmentTreeW do
         expect(segment_tree.prod(0, 5)).to eq arr[0, 5].sum - 7
       end
     end
+
+    context "max_right" do
+      it "条件を満たす最大のindex+1が得られる" do
+        expect(segment_tree.max_right(0) { _1 <= 17 }).to eq 4
+      end
+    end
+
+    context "min_left" do
+      it "条件を満たす最小のindexが得られる" do
+        expect(segment_tree.min_left(10) { _1 <= 23 }).to eq 7
+      end
+    end
   end
 
   describe "最大値" do
@@ -44,6 +56,18 @@ RSpec.describe SegmentTreeW do
       end
       it "prodで指定した範囲の更新後の最大値が得られる" do
         expect(segment_tree.prod(0, 5)).to eq 1_000_000
+      end
+    end
+
+    context "max_right" do
+      it "条件を満たす最大のindex+1が得られる" do
+        expect(segment_tree.max_right(0) { _1 < 10 }).to eq 6
+      end
+    end
+
+    context "min_left" do
+      it "条件を満たす最小のindexが得られる" do
+        expect(segment_tree.min_left(10) { _1 < 10 }).to eq 7
       end
     end
   end
