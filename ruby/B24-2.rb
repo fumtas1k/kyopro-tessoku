@@ -68,6 +68,8 @@ end
 
 MAX = 5 * 10 ** 5
 N = gets.to_i
+# xの最小順にし、yが同じ場合はyの最大順になるよう並び替えることで
+# yの最長増加部分列として問題を解くことができる
 XY = Array.new(N) { gets.split.map(&:to_i) }.sort_by { [_1, -_2] }.uniq
 
 # [lis, idx]
@@ -75,6 +77,7 @@ st = SegTree.new(MAX + 1, [0, -1]) { |x, y| x.first >= y.first ? x : y }
 pre = []
 XY.each_with_index do |(x, y), i|
   lis, idx = st.prod(0, y + 1)
+  # y座標が同じ場合はlisは増加しないためスキップ
   next if idx != -1 && XY[idx][1] == y
   pre[i] = idx
   st.set(y, [lis + 1, i])
