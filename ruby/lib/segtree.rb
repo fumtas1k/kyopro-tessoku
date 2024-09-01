@@ -1,6 +1,6 @@
 # セグメント木
 
-class SegmentTreeW
+class SegTree
   # leaf_size: 葉の数
   # ope: 演算メソッド(合計, 最大値, 最小値などの計算)
   # id_elm: 単位元(演算メソッドで結果がもう一方の値と同じとなる要素。足し算なら0、掛け算なら1。)
@@ -49,12 +49,14 @@ class SegmentTreeW
     res = id_elm
     while left < right
       if left[0] == 1
+        # 引数の順番に注意. 同値の場合に正しい結果を得るため
         res = ope.call(res, tree[left])
         left += 1
       end
       if right[0] == 1
         right -= 1
-        res = ope.call(res, tree[right])
+        # 引数の順番に注意. 同値の場合に正しい結果を得るため
+        res = ope.call(tree[right], res)
       end
       left >>= 1
       right >>= 1

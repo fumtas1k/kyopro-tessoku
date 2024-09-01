@@ -123,7 +123,7 @@
 
 | アルゴリズム名 | クラス名 | ruby | java | kotlin | JS |
 | - | - | - | - | - | - |
-| セグメント木 | SegmentTree | [ruby再帰](ruby/lib/segment_tree_r.rb), [ruby非再帰](ruby/lib/segment_tree_w.rb) | | [kotlin再帰](src/main/kotlin/ktln/lib/SegmentTreeR.kt), [kotlin非再帰](src/main/kotlin/ktln/lib/SegmentTreeW.kt) | [JS](javascript/lib/segment_tree.js) |
+| セグメント木 | SegmentTree | [ruby再帰](ruby/lib/segment_tree_r.rb), [ruby非再帰](ruby/lib/segtree.rb) | | [kotlin再帰](src/main/kotlin/ktln/lib/SegmentTreeR.kt), [kotlin非再帰](src/main/kotlin/ktln/lib/SegmentTreeW.kt) | [JS](javascript/lib/segment_tree.js) |
 | 素集合データ構造 | UnionFind | [ruby](ruby/lib/union_find.rb) | [java](src/main/java/jv/lib/UnionFind.java) | [kotlin](src/main/kotlin/ktln/lib/UnionFind.kt) | |
 | 素集合データ構造 | DSU | [ruby](ruby/lib/dsu.rb) |  | [kotlin](src/main/kotlin/ktln/lib/DSU.kt) | [JS](javascript/lib/dsu.js) |
 | ヒープ | MinHeap | [ruby](ruby/lib/min_heap.rb) | | | |
