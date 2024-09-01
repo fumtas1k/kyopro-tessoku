@@ -7,18 +7,19 @@ package ktln.lib
  * @property idElm 単位元(演算メソッドで結果がもう一方の値と同じとなる要素。足し算なら0、掛け算なら1。)
  * @property operator 演算メソッド(合計, 最大値, 最小値などの計算)
  */
-class SegmentTreeW(
-  private val list: List<Long>,
-  private val idElm: Long,
-  private val operator: (Long, Long) -> Long
+class SegmentTreeW<T>(
+  private val list: List<T>,
+  private val idElm: T,
+  private val operator: (T, T) -> T
 ) {
-  public val leafSize: Int
-  private val tree: LongArray
+  val leafSize: Int
+  private val tree: Array<T>
+
   init {
     var size = 1
     while (size < list.size) size *= 2
     leafSize = size
-    tree = LongArray(leafSize * 2) { idElm }
+    tree = Array<Any?>(leafSize * 2) { idElm } as Array<T>
     repeat(list.size) { tree[leafSize + it] = list[it] }
     (leafSize - 1 downTo 1).forEach { tree[it] = operator(tree[2 * it], tree[2 * it + 1]) }
   }
@@ -26,16 +27,26 @@ class SegmentTreeW(
   /**
    * 更新
    *
-   * @param pos listのindex + 1
+   * @param pos listのindex
    * @param x 更新する値
    */
-  fun update(pos: Int, x: Long) {
-    var idx = pos + leafSize - 1
+  fun set(pos: Int, x: T) {
+    var idx = pos + leafSize
     tree[idx] = x
     while (idx > 1) {
       idx /= 2
-      tree[idx] = operator(tree[idx * 2], tree[2 * idx + 1])
+      update(idx)
     }
+  }
+
+  /**
+   * 値の取得
+   *
+   * @param pos listのindex
+   * @return 値
+   */
+  fun get(pos: Int): T {
+    return tree[pos + leafSize]
   }
 
   /**
@@ -45,18 +56,22 @@ class SegmentTreeW(
    * @param r 求めたい半開区間の右（その値は含まない）
    * @return
    */
-  fun query(l: Int, r: Int): Long  {
-    if (l < 1 || l >= r || r > leafSize + 1) return idElm
-    var left = l + leafSize - 1
-    var right = r + leafSize - 2
+  fun query(l: Int, r: Int): T {
+    if (l < 0 || l >= r || r > leafSize + 1) return idElm
+    var left = l + leafSize
+    var right = r + leafSize
     var leftAns = idElm
     var rightAns = idElm
-    while (left <= right) {
+    while (left < right) {
       if (left % 2 == 1) leftAns = operator(leftAns, tree[left++])
-      if (right % 2 == 0) rightAns = operator(rightAns, tree[right--])
+      if (right % 2 == 1) rightAns = operator(tree[--right], rightAns)
       left /= 2
       right /= 2
     }
     return operator(leftAns, rightAns)
+  }
+
+  private fun update(index: Int) {
+    tree[index] = operator(tree[index * 2], tree[2 * index + 1])
   }
 }

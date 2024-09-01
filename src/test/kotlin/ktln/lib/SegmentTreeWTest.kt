@@ -11,8 +11,8 @@ import kotlin.math.max
  *
  */
 internal class SegmentTreeWTest {
-  private lateinit var segmentTreeW: SegmentTreeW
-  private val arr = listOf(3L, 7L, 5L, 2L, 1L, 4L, 10L, 8L, 9L, 6L)
+  private lateinit var segmentTreeW: SegmentTreeW<Long>
+  private val arr = listOf(3L, 7L, 5L, 2L, 1L, 4L, 8L, 10L, 9L, 6L)
 
   @Nested
   inner class 加算 {
@@ -28,16 +28,16 @@ internal class SegmentTreeWTest {
 
     @Test
     fun queryで範囲を指定した場合その範囲の合計が得られる() {
-      val expected = arr.subList(0, 5).sum()
-      val actual = segmentTreeW.query(1, 6)
+      val expected = arr.subList(0, 7).sum()
+      val actual = segmentTreeW.query(0, 7)
       assertEquals(expected, actual)
     }
 
     @Test
-    fun updateで値を更新するとそれを含む範囲の合計も更新される() {
-      segmentTreeW.update(2, 0L)
+    fun setで値を更新するとそれを含む範囲の合計も更新される() {
+      segmentTreeW.set(1, 0L)
       val expected = arr.subList(0, 5).sum() - 7
-      val actual = segmentTreeW.query(1, 6)
+      val actual = segmentTreeW.query(0, 5)
       assertEquals(expected, actual)
     }
   }
@@ -51,16 +51,16 @@ internal class SegmentTreeWTest {
 
     @Test
     fun queryで範囲を指定した場合その範囲の最大値が得られる() {
-      val expected = arr.subList(0, 5).max()
-      val actual = segmentTreeW.query(1, 6)
+      val expected = arr.subList(0, 7).max()
+      val actual = segmentTreeW.query(0, 7)
       assertEquals(expected, actual)
     }
 
     @Test
-    fun updateで値を更新するとそれを含む範囲の合計も更新される() {
-      segmentTreeW.update(2, 1_000_000L)
+    fun setで値を更新するとそれを含む範囲の合計も更新される() {
+      segmentTreeW.set(2, 1_000_000L)
       val expected = 1_000_000L
-      val actual = segmentTreeW.query(1, 6)
+      val actual = segmentTreeW.query(0, 5)
       assertEquals(expected, actual)
     }
   }
