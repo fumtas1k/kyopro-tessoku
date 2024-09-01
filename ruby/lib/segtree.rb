@@ -46,22 +46,23 @@ class SegTree
     return id_elm if l < 0 || l > r || r > leaf_size
     left = leaf_size + l
     right = leaf_size + r
-    res = id_elm
+    sml = id_elm
+    smr = id_elm
     while left < right
       if left[0] == 1
         # 引数の順番に注意. 同値の場合に正しい結果を得るため
-        res = ope.call(res, tree[left])
+        sml = ope.call(sml, tree[left])
         left += 1
       end
       if right[0] == 1
         right -= 1
         # 引数の順番に注意. 同値の場合に正しい結果を得るため
-        res = ope.call(tree[right], res)
+        smr = ope.call(tree[right], smr)
       end
       left >>= 1
       right >>= 1
     end
-    res
+    ope.call(sml, smr)
   end
 
   # l以上のfを満たす最大のindex+1
@@ -102,17 +103,17 @@ class SegTree
     loop do
       right -= 1
       right >>= 1 while right > 1 && right.odd?
-      unless f.call(ope.call(sm, tree[right]))
+      unless f.call(ope.call(tree[right], sm))
         while right < leaf_size
           right += right + 1
-          if f.call(ope.call(sm, tree[right]))
-            sm = ope.call(sm, tree[right])
+          if f.call(ope.call(tree[right], sm))
+            sm = ope.call(tree[right], sm)
             right -= 1
           end
         end
         return right + 1 - leaf_size
       end
-      sm = ope.call(sm, tree[right])
+      sm = ope.call(tree[right], sm)
       break if right & -right == right
     end
     0
