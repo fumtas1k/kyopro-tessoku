@@ -40,7 +40,7 @@
 | [A23](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_w) | 動的計画法, bitDP | [ruby](ruby/A23.rb) | | | |
 | [B23](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cv) | 動的計画法, bitDP | [ruby](ruby/B23.rb) | | | |
 | [A24](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_x) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/A24.rb) | | | |
-| [B24](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cw) | 動的計画法, 二分探索法, 最長増加部分列, LIS | [ruby](ruby/B24.rb) | | | |
+| [B24](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cw) | 動的計画法, 二分探索法, セグメント木, 最長増加部分列, LIS | [ruby](ruby/B24-1.rb), [ruby](ruby/B24-2.rb) | | | |
 | [A25](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_y) | 動的計画法, Number of Routes | [ruby](ruby/A25.rb) | | | |
 | [A26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_z) | 素数判定 | [ruby1](ruby/A26-01.rb), [ruby2](ruby/A26-02.rb) | | | |
 | [B26](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_cy) | 素数判定 | [ruby](ruby/B26.rb) | | | |
