@@ -118,6 +118,6 @@ class SegmentTreeW
 
   private
   def update(idx)
-    tree[idx] = ope.call(tree[2 * idx, 2 * idx + 1])
+    tree[idx] = ope.call(tree[2 * idx], tree[2 * idx + 1])
   end
 end
