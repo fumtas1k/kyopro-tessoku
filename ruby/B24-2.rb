@@ -5,17 +5,15 @@
 # 実行時間: 1s以内
 
 class SegTree
-  attr_accessor :leaf_size, :id_elm, :tree, :size
+  attr_accessor :leaf_size, :id_elm, :ope, :tree, :size
 
-  def initialize(n, id_elm)
+  def initialize(n, id_elm, &ope)
     @size = n
     @id_elm = id_elm
+    @ope = ope
     @leaf_size = 1 << (@size - 1).bit_length
     @tree = Array.new(2 * @leaf_size, @id_elm)
   end
-
-  # lambdaで渡すと実行速度が遅くなるのでメソッドで渡す
-  def ope(a, b) = a.first >= b.first ? a : b
 
   def get(pos)
     tree[leaf_size + pos]
@@ -49,22 +47,22 @@ class SegTree
     smr = id_elm
     while left < right
       if left[0] == 1
-        sml = ope(sml, tree[left])
+        sml = ope.call(sml, tree[left])
         left += 1
       end
       if right[0] == 1
         right -= 1
-        smr = ope(tree[right], smr)
+        smr = ope.call(tree[right], smr)
       end
       left >>= 1
       right >>= 1
     end
-    ope(sml, smr)
+    ope.call(sml, smr)
   end
 
   private
   def update(idx)
-    tree[idx] = ope(tree[2 * idx], tree[2 * idx + 1])
+    tree[idx] = ope.call(tree[2 * idx], tree[2 * idx + 1])
   end
 end
 
@@ -73,7 +71,7 @@ N = gets.to_i
 XY = Array.new(N) { gets.split.map(&:to_i) }.sort_by { [_1, -_2] }.uniq
 
 # [lis, idx]
-st = SegTree.new(MAX + 1, [0, -1])
+st = SegTree.new(MAX + 1, [0, -1]) { |x, y| x.first >= y.first ? x : y }
 pre = []
 XY.each_with_index do |(x, y), i|
   lis, idx = st.prod(0, y + 1)
