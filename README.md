@@ -135,3 +135,4 @@
 | トライ木 | Trie | [ruby](ruby/lib/trie.rb) | | | |
 | manacher | manacher | [ruby](ruby/lib/manacher.rb) | | | |
 | Zアルゴリズム | z_algorithm | [ruby](ruby/lib/z_algorithm.rb) | | | |
+| 最近共通祖先 | LCA | [ruby](ruby/lib/lca.rb) | | | |
