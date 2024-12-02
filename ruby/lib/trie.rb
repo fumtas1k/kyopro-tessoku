@@ -1,11 +1,11 @@
 # トライ木
 
 class Trie
-  Node = Struct.new(:child, :is_end, :value, :count, keyword_init: true) {
+  Node = Struct.new(:child, :is_end, :value, :count, keyword_init: true) do
     def self.default
       new(child: Hash.new, is_end: false, value: nil, count: 0)
     end
-  }
+  end
 
   attr_reader :root
 
@@ -16,15 +16,13 @@ class Trie
   def insert(word, value = nil)
     node = root
     word.chars.each do |c|
-      unless node.child[c]
-        node.child[c] = Node.default
-      end
+      node.child[c] ||= Node.default
       node.count += 1
       node = node.child[c]
     end
-      node.count += 1
-      node.value = value
-      node.is_end = true
+    node.count += 1
+    node.value = value
+    node.is_end = true
   end
 
   def search(word)
