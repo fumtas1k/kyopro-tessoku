@@ -28,5 +28,18 @@ def z_algorithm(str)
     top += i
     cnt -= i
   end
-  return sizes
+  sizes
 end
+
+# 以下は、Zアルゴリズムの別の実装例です。
+# def z_algorithm(str)
+#   z = [0] * str.size
+#   z[0] = str.size
+#   l = 0
+#   (1 ... str.size).each do |i|
+#     z[i] = [z[i - l], l + z[l] - i].min if i < l + z[l]
+#     z[i] += 1 while i + z[i] < str.size && str[z[i]] == str[i + z[i]]
+#     l = i if z[i] != 0 && i + z[i] >= l + z[l]
+#   end
+#   z
+# end
