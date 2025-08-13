@@ -9,7 +9,7 @@
 | [A03](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_c) | | | | | [JS](javascript/A03.js) |[haskell](haskell/A03.hs)|
 | [A04](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_d) | 2進法 | | | | [JS](javascript/A04.js) |[haskell](haskell/A04.hs)|
 | [A05](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_e) | | | | | [JS](javascript/A05.js) |[haskell](haskell/A05.hs)|
-| [A06](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_f) | 累積和 | | | | [JS](javascript/A06.js) ||
+| [A06](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_ai) | 累積和 | | | | [JS](javascript/A06.js) |[haskell](haskell/A06.hs)|
 | [A07](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_g) | いもす法 | | | | [JS](javascript/A07.js) ||
 | [B07](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_al) | いもす法 | [ruby](ruby/B07.rb) | | | ||
 | [A08](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_h) | 二次元累積和 | [ruby](ruby/A08.rb) | | | ||
