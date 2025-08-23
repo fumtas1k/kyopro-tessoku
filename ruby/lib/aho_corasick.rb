@@ -57,9 +57,7 @@ class AhoCorasick
 
         # failure link の行先を探索
         failure = node.failure
-        while failure && !failure.children[char]
-          failure = failure.failure
-        end
+        failure = failure.failure while failure && !failure.children[char]
 
         # failure link を設定（nil セーフティ）
         child.failure = failure && failure.children[char] ? failure.children[char] : @root
@@ -79,9 +77,7 @@ class AhoCorasick
 
     text.each_char do |char|
       # 現在のノードから該当文字で進めない場合、failure link を辿る
-      while node != @root && !node.children[char]
-        node = node.failure
-      end
+      node = node.failure while node != @root && !node.children[char]
 
       # 該当文字の辺が存在すれば遷移
       node = node.children[char] if node.children[char]
