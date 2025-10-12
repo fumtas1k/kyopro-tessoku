@@ -5,7 +5,8 @@
 
 N, K = gets.split.map(&:to_i)
 A = gets.split.map(&:to_i)
-# dp[i: 石の数]　:= 先手が勝ち true, 負け false
+# dp[i: 石の数]　:= 手番でi個の石が残っている時に勝つ場合true
+# 石が0個で手番になるのは負けなのでdp[0] = falseとする
 dp = Array.new(N + 1, false)
 
 1.upto(N) do |i|
