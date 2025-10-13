@@ -3,4 +3,9 @@
 # 実行時間: 1s以内
 
 N = gets.to_i
-puts gets.split.map(&:to_i).reduce(:^).zero? ? "Second" : "First"
+A = gets.split.map(&:to_i)
+
+# 手番で全ての山の石が0個、つまりニム和が 0(0 ^ .. ^ 0)は負け
+# ニム和が0でない場合、必ずニム和を0にする石の取り方が存在する
+# つまり、初期状態で A1 ^ .. ^ AN = 0　なら先手の負け
+puts A.reduce(:^).zero? ? "Second" : "First"
