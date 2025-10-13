@@ -50,6 +50,8 @@
 | [B29](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_db) | 冪乗 | [ruby](ruby/B29.rb) | | | ||
 | [A30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ad) | フェルマーの小定理 | [ruby](ruby/A30.rb) | | | ||
 | [B30](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dc) | フェルマーの小定理 | [ruby](ruby/B30.rb) | | | ||
+| [A31](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ae) | 包除原理 | [ruby](ruby/A31.rb) | | | ||
+| [B31](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dd) | 包除原理 | [ruby](ruby/B31.rb) | | | ||
 | [A32](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_af) | 動的計画法, 石取り | [ruby](ruby/A32.rb) | | | ||
 | [B32](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_de) | 動的計画法, 石取り | [ruby](ruby/B32.rb) | | | ||
 | [A33](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ag) | ニム | [ruby](ruby/A33.rb) | | | ||
