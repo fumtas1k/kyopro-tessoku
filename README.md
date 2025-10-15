@@ -60,6 +60,7 @@
 | [B34](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_dg) | grundy数 | [ruby](ruby/B34.rb) | | | ||
 | [A35](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ai) | 動的計画法, 後ろから考える | [ruby](ruby/A35.rb) | | | ||
 | [A36](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ah) | 偶奇 | [ruby](ruby/A36.rb) | | | ||
+| [B36](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_di) | 偶奇 | [ruby](ruby/B36.rb) | | | ||
 | [A37](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_ak) | 足される回数 | [ruby](ruby/A37.rb) | | | ||
 | [A38](https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_al) | 上限値 | [ruby](ruby/A38.rb) | | | ||
 | [A39](https://atcoder.jp/contests/tessoku-book/tasks/math_and_algorithm_bn) | 貪欲法 | [ruby](ruby/A39.rb) | | | ||
