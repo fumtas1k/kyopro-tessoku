@@ -2,8 +2,8 @@
 # O(N) で求められる
 def manacher(str)
   # 偶数長の場合も考慮し奇数長になるよう文字列に含まれない"$"を挿入
-  chars = str.chars.join("$").then { "$#{_1}$" }
-  size = chars.size
+  bytes = str.chars.join("$").then { "$#{_1}$" }.bytes
+  size = bytes.size
   # 中心iの回文の半径
   radius = [0] * size
   i = 0
@@ -11,7 +11,7 @@ def manacher(str)
     # 中心がiの半径を求める
     radius[i] += 1 while i - radius[i] >= 0 &&
       i + radius[i] < size &&
-      chars[i - radius[i]] == chars[i + radius[i]]
+      bytes[i - radius[i]] == bytes[i + radius[i]]
 
     j = 1
     # 対称性を利用して i + j の半径を求める
