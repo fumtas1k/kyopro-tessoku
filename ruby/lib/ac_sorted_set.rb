@@ -1,6 +1,6 @@
-# SortedMultiset / SortedSet for AtCoder (Ruby)
+# AcSortedMultiSet / AcSortedSet for AtCoder (Ruby)
 # Usage: copy-paste into your submission
-class SortedMultiset
+class AcSortedMultiSet
   BK = 1500
   attr_reader :size
   def initialize(a=nil)
@@ -70,9 +70,9 @@ class SortedMultiset
   def to_a; @a.flatten; end
 end
 
-class SortedSet
+class AcSortedSet
   attr_reader :size
-  def initialize(a=nil); @ms=SortedMultiset.new; @size=0
+  def initialize(a=nil); @ms=AcSortedMultiSet.new; @size=0
     if a; h={}; a.each{|v| next if h[v]; h[v]=1; @ms.add(v)}; @size=@ms.size; end; end
   def add(v); return false if @ms.include?(v); @ms.add(v); @size=@ms.size; true; end
   alias << add

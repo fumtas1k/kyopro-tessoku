@@ -1,10 +1,10 @@
 require "rspec-parameterized"
 
-require_relative "../lib/sorted_set"
+require_relative "../lib/ac_sorted_set"
 
-# SortedMultisetのテスト
-RSpec.describe SortedMultiset do
-  let(:ms) { SortedMultiset.new }
+# AcSortedMultiSetのテスト
+RSpec.describe AcSortedMultiSet do
+  let(:ms) { AcSortedMultiSet.new }
 
   describe "初期化テスト" do
     context "引数なしの場合" do
@@ -18,7 +18,7 @@ RSpec.describe SortedMultiset do
     end
 
     context "配列で初期化する場合" do
-      let(:ms_with_array) { SortedMultiset.new([5, 3, 1, 3, 7]) }
+      let(:ms_with_array) { AcSortedMultiSet.new([5, 3, 1, 3, 7]) }
 
       it "サイズが正しいこと" do
         expect(ms_with_array.size).to eq 5
@@ -392,7 +392,7 @@ RSpec.describe SortedMultiset do
     end
 
     context "空の場合" do
-      let(:empty_ms) { SortedMultiset.new }
+      let(:empty_ms) { AcSortedMultiSet.new }
 
       it "nilを返すこと" do
         expect(empty_ms.min).to be_nil
@@ -415,7 +415,7 @@ RSpec.describe SortedMultiset do
     end
 
     context "空の場合" do
-      let(:empty_ms) { SortedMultiset.new }
+      let(:empty_ms) { AcSortedMultiSet.new }
 
       it "nilを返すこと" do
         expect(empty_ms.shift).to be_nil
@@ -437,7 +437,7 @@ RSpec.describe SortedMultiset do
     end
 
     context "空の場合" do
-      let(:empty_ms) { SortedMultiset.new }
+      let(:empty_ms) { AcSortedMultiSet.new }
 
       it "nilを返すこと" do
         expect(empty_ms.pop).to be_nil
@@ -498,7 +498,7 @@ RSpec.describe SortedMultiset do
     end
 
     context "空の場合" do
-      let(:empty_ms) { SortedMultiset.new }
+      let(:empty_ms) { AcSortedMultiSet.new }
 
       it "空配列を返すこと" do
         expect(empty_ms.to_a).to eq []
@@ -517,9 +517,9 @@ RSpec.describe SortedMultiset do
   end
 end
 
-# SortedSetのテスト
-RSpec.describe SortedSet do
-  let(:ss) { SortedSet.new }
+# AcSortedSetのテスト
+RSpec.describe AcSortedSet do
+  let(:ss) { AcSortedSet.new }
 
   describe "初期化テスト" do
     context "引数なしの場合" do
@@ -533,7 +533,7 @@ RSpec.describe SortedSet do
     end
 
     context "配列で初期化する場合" do
-      let(:ss_with_array) { SortedSet.new([5, 3, 1, 3, 7]) }
+      let(:ss_with_array) { AcSortedSet.new([5, 3, 1, 3, 7]) }
 
       it "サイズが正しいこと（重複除外）" do
         expect(ss_with_array.size).to eq 4
@@ -729,10 +729,10 @@ RSpec.describe SortedSet do
     end
   end
 
-  describe "SortedMultisetとの比較" do
+  describe "AcSortedMultiSetとの比較" do
     it "重複の扱いが異なること" do
-      ms = SortedMultiset.new([1, 2, 2, 3])
-      set = SortedSet.new([1, 2, 2, 3])
+      ms = AcSortedMultiSet.new([1, 2, 2, 3])
+      set = AcSortedSet.new([1, 2, 2, 3])
 
       expect(ms.size).to eq 4
       expect(set.size).to eq 3

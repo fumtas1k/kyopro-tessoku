@@ -1,19 +1,19 @@
-# SortedMultiset / SortedSet for Ruby 競技プログラミング
+# AcSortedMultiSet / AcSortedSet for Ruby 競技プログラミング
 
 AtCoder等の競技プログラミングで使える **pure Ruby** のソート済み多重集合 / 集合。
 C++の `std::multiset` + `__gnu_pbds::tree` に相当する機能を提供します。
 
 ## 使い方
 
-提出コードの先頭に `sorted_multiset.rb` の内容をコピペして使います（101行）。
+提出コードの先頭に `ac_sorted_set.rb` の内容をコピペして使います（101行）。
 
 ## API リファレンス
 
-### SortedMultiset（重複許可）
+### AcSortedMultiSet（重複許可）
 
 ```ruby
-ms = SortedMultiset.new           # 空で初期化
-ms = SortedMultiset.new([3,1,4])  # 配列から初期化 → [1, 3, 4]
+ms = AcSortedMultiSet.new           # 空で初期化
+ms = AcSortedMultiSet.new([3,1,4])  # 配列から初期化 → [1, 3, 4]
 
 # 追加・削除
 ms.add(5)          # ms << 5 でも可
@@ -49,12 +49,12 @@ ms.reverse_each { |v| }  # 降順イテレーション
 ms.to_a            # 配列に変換
 ```
 
-### SortedSet（重複なし）
+### AcSortedSet（重複なし）
 
-SortedMultisetと同じAPIですが、`add`は重複時に`false`を返します。
+AcSortedMultiSetと同じAPIですが、`add`は重複時に`false`を返します。
 
 ```ruby
-ss = SortedSet.new
+ss = AcSortedSet.new
 ss.add(5)   #=> true  (self)
 ss.add(5)   #=> false (既に存在)
 ss.to_a     #=> [5]
@@ -64,7 +64,7 @@ ss.to_a     #=> [5]
 
 ### 1. 中央値クエリ（要素を追加しながら中央値を取得）
 ```ruby
-ms = SortedMultiset.new
+ms = AcSortedMultiSet.new
 values.each do |v|
   ms << v
   median = ms.kth((ms.size - 1) / 2)
@@ -74,7 +74,7 @@ end
 
 ### 2. 転倒数（Inversions）
 ```ruby
-ms = SortedMultiset.new
+ms = AcSortedMultiSet.new
 inv = 0
 perm.each do |v|
   inv += ms.size - ms.count_le(v)
@@ -85,7 +85,7 @@ puts inv
 
 ### 3. 切り分け問題（ABC217D型）
 ```ruby
-ss = SortedSet.new
+ss = AcSortedSet.new
 ss << 0; ss << total_length
 cuts.each do |pos|
   ss << pos
@@ -98,7 +98,7 @@ puts r - l
 
 ### 4. K番目に大きい値（ABC234D型）
 ```ruby
-ms = SortedMultiset.new
+ms = AcSortedMultiSet.new
 data.each_with_index do |v, i|
   ms << v
   if i + 1 >= k
@@ -109,7 +109,7 @@ end
 
 ### 5. 最近傍探索
 ```ruby
-ms = SortedMultiset.new
+ms = AcSortedMultiSet.new
 values.each do |v|
   unless ms.empty?
     lb = ms.lower_bound(v)
