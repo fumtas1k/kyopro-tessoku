@@ -123,6 +123,20 @@ class FwtSortedMultiSet
   # @return [Comparable, nil] 最大値
   def max = kth(@size)
 
+  # 最小の要素を削除して返す
+  # @return [Comparable, nil] 削除された要素（空の場合はnil）
+  # @note 計算量: O(log N)
+  def shift
+    delete_at(1)
+  end
+
+  # 最大の要素を削除して返す
+  # @return [Comparable, nil] 削除された要素（空の場合はnil）
+  # @note 計算量: O(log N)
+  def pop
+    delete_at(@size)
+  end
+
   # maybe_key 以下の最大の要素を返す（maybe_key自身も含む）
   # @param maybe_key [Comparable]
   # @return [Comparable, nil]
@@ -165,6 +179,14 @@ class FwtSortedMultiSet
   end
   alias [] count
 
+  # 指定した要素がセットに含まれるかを返す
+  # @param key [Comparable]
+  # @return [Boolean] 要素が1つ以上含まれるか
+  # @note 計算量: O(log N)
+  def include?(key)
+    count(key) > 0
+  end
+
   # セットが空かどうか
   # @return [Boolean]
   def empty? = @size.zero?
@@ -182,6 +204,21 @@ class FwtSortedMultiSet
       (cur_sum - prev_sum).times { yield val }
       prev_sum = cur_sum
     end
+  end
+
+  # セットの全要素を配列として返す
+  # @return [Array<Comparable>] 昇順にソートされた要素の配列（重複含む）
+  # @note 計算量: O(N log N)
+  def to_a
+    result = []
+    prev_sum = 0
+    @sorted.each_with_index do |val, idx|
+      cur_sum = _sum(idx + 1)
+      cnt = cur_sum - prev_sum
+      cnt.times { result << val }
+      prev_sum = cur_sum
+    end
+    result
   end
 
   private
